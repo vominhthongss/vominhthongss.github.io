@@ -13,7 +13,8 @@
   nav.langs button[aria-pressed="true"] { font-weight: bold; }
   .brand, .tagline, .soon, footer { color: #555; }
   .brand, footer { font-size: 14px; }
-  .stores a, .stores span { display: inline-block; margin: 0 12px 8px 0; }
+  .stores a { display: inline-block; margin: 0 12px 8px 0; vertical-align: middle; }
+  .stores img { height: 48px; width: auto; display: block; }
   footer { border-top: 1px solid #ddd; margin-top: 32px; padding-top: 12px; }
   .icon { width: 72px; height: 72px; border-radius: 6px; display: block; margin: 8px 0 4px; }
   .shots { display: flex; gap: 8px; overflow-x: auto; padding: 4px 0 12px; }
@@ -257,11 +258,25 @@
   const APP_STORE_URL = "";
   // true khi app đã lên store: ẩn dòng "Sắp ra mắt".
   const RELEASED = false;
+  // Hình huy hiệu chính thức của 2 store: tải về, để chung thư mục với index.html, đặt đúng tên này.
+  // Chưa có file thì nút tự hiện chữ thay cho hình.
+  const GOOGLE_PLAY_BADGE = "badge-google-play.png";
+  const APP_STORE_BADGE = "badge-app-store.svg";
 
   (function () {
     document.documentElement.classList.add("js");
-    for (const a of document.querySelectorAll("a.gp")) { a.href = GOOGLE_PLAY_URL; a.hidden = !GOOGLE_PLAY_URL; }
-    for (const a of document.querySelectorAll("a.as")) { a.href = APP_STORE_URL; a.hidden = !APP_STORE_URL; }
+    function badge(a, url, img) {
+      a.href = url; a.hidden = !url;
+      if (!img) return;
+      const label = a.textContent;
+      const el = document.createElement("img");
+      el.alt = label;
+      el.onerror = () => { a.textContent = label; };  // chưa có file hình: hiện chữ
+      el.src = img;
+      a.replaceChildren(el);
+    }
+    for (const a of document.querySelectorAll("a.gp")) badge(a, GOOGLE_PLAY_URL, GOOGLE_PLAY_BADGE);
+    for (const a of document.querySelectorAll("a.as")) badge(a, APP_STORE_URL, APP_STORE_BADGE);
     for (const p of document.querySelectorAll(".soon")) p.hidden = RELEASED;
 
     const LANGS = ["en", "vi", "ja", "ko", "zh_CN", "zh_TW", "fr", "de", "th", "km"];
