@@ -13,8 +13,14 @@
   nav.langs button[aria-pressed="true"] { font-weight: bold; }
   .brand, .tagline, .soon, footer { color: #555; }
   .brand, footer { font-size: 14px; }
+  /* 2 huy hiệu cùng 1 khung 160x48. Hình giữ đúng tỉ lệ (không méo), canh giữa trong khung. */
   .stores a { display: inline-block; margin: 0 12px 8px 0; vertical-align: middle; }
-  .stores img { height: 48px; width: auto; display: block; }
+  .stores a.has-badge { width: 160px; height: 48px; overflow: hidden; }
+  .stores a.has-badge img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  /* PNG của Google (646x250) có sẵn viền trong suốt quanh huy hiệu nên trông nhỏ hơn.
+     Phóng lên để phần huy hiệu cao bằng huy hiệu Apple. Lệch thì chỉnh số --gp-scale. */
+  :root { --gp-scale: 1.45; }
+  .stores a.gp.has-badge img { transform: scale(var(--gp-scale)); }
   footer { border-top: 1px solid #ddd; margin-top: 32px; padding-top: 12px; }
   .icon { width: 72px; height: 72px; border-radius: 6px; display: block; margin: 8px 0 4px; }
   .shots { display: flex; gap: 8px; overflow-x: auto; padding: 4px 0 12px; }
@@ -271,8 +277,9 @@
       const label = a.textContent;
       const el = document.createElement("img");
       el.alt = label;
-      el.onerror = () => { a.textContent = label; };  // chưa có file hình: hiện chữ
+      el.onerror = () => { a.classList.remove("has-badge"); a.textContent = label; };  // chưa có file hình: hiện chữ
       el.src = img;
+      a.classList.add("has-badge");
       a.replaceChildren(el);
     }
     for (const a of document.querySelectorAll("a.gp")) badge(a, GOOGLE_PLAY_URL, GOOGLE_PLAY_BADGE);
