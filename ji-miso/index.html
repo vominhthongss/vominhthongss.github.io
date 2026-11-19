@@ -8,92 +8,92 @@
 <link rel="stylesheet" href="../assets/tailwind.css">
 <script src="../assets/site.js" defer></script>
 </head>
-<body class="mx-auto min-h-screen max-w-6xl bg-slate-50 px-4 py-6 font-sans leading-relaxed text-slate-800 sm:px-8 sm:py-10">
-<header class="mb-6 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
-  <a data-local-link href="../index.html" class="mb-3 inline-block text-lg font-bold text-slate-900">vominhthongss</a>
-  <nav aria-label="Projects" class="flex flex-wrap gap-1">
-    <a data-local-link data-home-label href="../index.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-[current=page]:bg-emerald-100 aria-[current=page]:text-emerald-900">Home</a>
-    <a data-local-link href="../lofi-garden/index.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-[current=page]:bg-emerald-100 aria-[current=page]:text-emerald-900">Lofi Garden</a>
-    <a data-local-link href="../karimen-honmen/index.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-[current=page]:bg-emerald-100 aria-[current=page]:text-emerald-900">Karimen &amp; Honmen</a>
-    <a data-local-link href="../ji-miso/index.html" aria-current="page" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-[current=page]:bg-emerald-100 aria-[current=page]:text-emerald-900">Ji Miso</a>
-    <a data-local-link href="../nail-view/index.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-[current=page]:bg-emerald-100 aria-[current=page]:text-emerald-900">Nail View</a>
-    <a data-local-link href="../onthitotnghiep/index.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-[current=page]:bg-emerald-100 aria-[current=page]:text-emerald-900">Ôn Thi Tốt Nghiệp</a>
+<body class="mx-auto my-0 max-w-[760px] px-[20px] pt-[16px] pb-[40px] bg-white text-black leading-[1.6]">
+<header>
+  <div class="text-[14px] text-[#555]">vominhthongss</div>
+  <nav aria-label="Projects" class="mb-[8px] flex flex-wrap gap-x-[12px]">
+    <a data-local-link data-home-label href="../index.html" class="aria-[current=page]:font-bold">Home</a>
+    <a data-local-link href="../lofi-garden/index.html" class="aria-[current=page]:font-bold">Lofi Garden</a>
+    <a data-local-link href="../karimen-honmen/index.html" class="aria-[current=page]:font-bold">Karimen &amp; Honmen</a>
+    <a data-local-link href="../ji-miso/index.html" aria-current="page" class="aria-[current=page]:font-bold">Ji Miso</a>
+    <a data-local-link href="../nail-view/index.html" class="aria-[current=page]:font-bold">Nail View</a>
+    <a data-local-link href="../onthitotnghiep/index.html" class="aria-[current=page]:font-bold">Ôn Thi Tốt Nghiệp</a>
   </nav>
 </header>
-<nav class="mb-6 flex flex-wrap gap-2" aria-label="Language">
-  <button type="button" data-lang="en" aria-pressed="true" class="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-emerald-600 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-pressed:border-emerald-700 aria-pressed:bg-emerald-700 aria-pressed:text-white">English</button>
-  <button type="button" data-lang="vi" aria-pressed="false" class="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-emerald-600 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-pressed:border-emerald-700 aria-pressed:bg-emerald-700 aria-pressed:text-white">Tiếng Việt</button>
-  <button type="button" data-lang="ja" aria-pressed="false" class="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-emerald-600 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-pressed:border-emerald-700 aria-pressed:bg-emerald-700 aria-pressed:text-white">日本語</button>
-  <button type="button" data-lang="ko" aria-pressed="false" class="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-emerald-600 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-pressed:border-emerald-700 aria-pressed:bg-emerald-700 aria-pressed:text-white">한국어</button>
-  <button type="button" data-lang="zh_CN" aria-pressed="false" class="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-emerald-600 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-pressed:border-emerald-700 aria-pressed:bg-emerald-700 aria-pressed:text-white">简体中文</button>
-  <button type="button" data-lang="zh_TW" aria-pressed="false" class="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-emerald-600 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-pressed:border-emerald-700 aria-pressed:bg-emerald-700 aria-pressed:text-white">繁體中文</button>
-  <button type="button" data-lang="fr" aria-pressed="false" class="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-emerald-600 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-pressed:border-emerald-700 aria-pressed:bg-emerald-700 aria-pressed:text-white">Français</button>
-  <button type="button" data-lang="de" aria-pressed="false" class="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-emerald-600 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-pressed:border-emerald-700 aria-pressed:bg-emerald-700 aria-pressed:text-white">Deutsch</button>
-  <button type="button" data-lang="th" aria-pressed="false" class="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-emerald-600 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-pressed:border-emerald-700 aria-pressed:bg-emerald-700 aria-pressed:text-white">ไทย</button>
-  <button type="button" data-lang="km" aria-pressed="false" class="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-emerald-600 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-pressed:border-emerald-700 aria-pressed:bg-emerald-700 aria-pressed:text-white">ខ្មែរ</button>
+<nav class="mt-[8px] mb-[16px]" aria-label="Language">
+  <button type="button" data-lang="en" aria-pressed="true" class="mr-[4px] mb-[6px] aria-pressed:font-bold">English</button>
+  <button type="button" data-lang="vi" aria-pressed="false" class="mr-[4px] mb-[6px] aria-pressed:font-bold">Tiếng Việt</button>
+  <button type="button" data-lang="ja" aria-pressed="false" class="mr-[4px] mb-[6px] aria-pressed:font-bold">日本語</button>
+  <button type="button" data-lang="ko" aria-pressed="false" class="mr-[4px] mb-[6px] aria-pressed:font-bold">한국어</button>
+  <button type="button" data-lang="zh_CN" aria-pressed="false" class="mr-[4px] mb-[6px] aria-pressed:font-bold">简体中文</button>
+  <button type="button" data-lang="zh_TW" aria-pressed="false" class="mr-[4px] mb-[6px] aria-pressed:font-bold">繁體中文</button>
+  <button type="button" data-lang="fr" aria-pressed="false" class="mr-[4px] mb-[6px] aria-pressed:font-bold">Français</button>
+  <button type="button" data-lang="de" aria-pressed="false" class="mr-[4px] mb-[6px] aria-pressed:font-bold">Deutsch</button>
+  <button type="button" data-lang="th" aria-pressed="false" class="mr-[4px] mb-[6px] aria-pressed:font-bold">ไทย</button>
+  <button type="button" data-lang="km" aria-pressed="false" class="mr-[4px] mb-[6px] aria-pressed:font-bold">ខ្មែរ</button>
 </nav>
-<main class="max-w-3xl">
-<article id="en" lang="en" class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm space-y-4 sm:p-8">
-<h1 class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Ji Miso</h1>
-<p class="text-lg text-slate-700">Learn Japanese through games and reading: a dictionary with kanji, a translator, a vocabulary notebook, JLPT N5–N1 practice, short stories and videos.</p>
-<p class="text-sm leading-relaxed text-slate-600">ji-miso.com · Languages: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
-<a href="https://ji-miso.com" class="inline-flex items-center gap-2 rounded-xl bg-emerald-700 px-5 py-3 font-semibold text-white shadow-sm hover:bg-emerald-800 focus-visible:outline-2 focus-visible:outline-emerald-600">Visit website <span aria-hidden="true">↗</span></a>
+<main>
+<article id="en" lang="en">
+<h1>Ji Miso</h1>
+<p>Learn Japanese through games and reading: a dictionary with kanji, a translator, a vocabulary notebook, JLPT N5–N1 practice, short stories and videos.</p>
+<p class="text-[14px] text-[#555]">ji-miso.com · Languages: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
+<a href="https://ji-miso.com">Visit website</a>
 </article>
-<article id="vi" lang="vi" class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm space-y-4 sm:p-8" hidden>
-<h1 class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Ji Miso</h1>
-<p class="text-lg text-slate-700">Học tiếng Nhật qua trò chơi và bài đọc: từ điển kèm kanji, dịch câu, sổ từ vựng, luyện JLPT N5–N1, truyện ngắn và video.</p>
-<p class="text-sm leading-relaxed text-slate-600">ji-miso.com · Ngôn ngữ: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
-<a href="https://ji-miso.com" class="inline-flex items-center gap-2 rounded-xl bg-emerald-700 px-5 py-3 font-semibold text-white shadow-sm hover:bg-emerald-800 focus-visible:outline-2 focus-visible:outline-emerald-600">Mở trang web <span aria-hidden="true">↗</span></a>
+<article id="vi" lang="vi" hidden>
+<h1>Ji Miso</h1>
+<p>Học tiếng Nhật qua trò chơi và bài đọc: từ điển kèm kanji, dịch câu, sổ từ vựng, luyện JLPT N5–N1, truyện ngắn và video.</p>
+<p class="text-[14px] text-[#555]">ji-miso.com · Ngôn ngữ: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
+<a href="https://ji-miso.com">Mở trang web</a>
 </article>
-<article id="ja" lang="ja" class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm space-y-4 sm:p-8" hidden>
-<h1 class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Ji Miso</h1>
-<p class="text-lg text-slate-700">ゲームや読みものを通して日本語を学ぶサイト。漢字つき辞書、翻訳、単語帳、JLPT N5〜N1 練習、短いお話や動画。</p>
-<p class="text-sm leading-relaxed text-slate-600">ji-miso.com · 対応言語: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
-<a href="https://ji-miso.com" class="inline-flex items-center gap-2 rounded-xl bg-emerald-700 px-5 py-3 font-semibold text-white shadow-sm hover:bg-emerald-800 focus-visible:outline-2 focus-visible:outline-emerald-600">ウェブサイトを開く <span aria-hidden="true">↗</span></a>
+<article id="ja" lang="ja" hidden>
+<h1>Ji Miso</h1>
+<p>ゲームや読みものを通して日本語を学ぶサイト。漢字つき辞書、翻訳、単語帳、JLPT N5〜N1 練習、短いお話や動画。</p>
+<p class="text-[14px] text-[#555]">ji-miso.com · 対応言語: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
+<a href="https://ji-miso.com">ウェブサイトを開く</a>
 </article>
-<article id="ko" lang="ko" class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm space-y-4 sm:p-8" hidden>
-<h1 class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Ji Miso</h1>
-<p class="text-lg text-slate-700">게임과 읽을거리로 배우는 일본어. 한자 사전, 번역기, 단어장, JLPT N5–N1 연습, 짧은 이야기와 영상.</p>
-<p class="text-sm leading-relaxed text-slate-600">ji-miso.com · 지원 언어: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
-<a href="https://ji-miso.com" class="inline-flex items-center gap-2 rounded-xl bg-emerald-700 px-5 py-3 font-semibold text-white shadow-sm hover:bg-emerald-800 focus-visible:outline-2 focus-visible:outline-emerald-600">웹사이트 열기 <span aria-hidden="true">↗</span></a>
+<article id="ko" lang="ko" hidden>
+<h1>Ji Miso</h1>
+<p>게임과 읽을거리로 배우는 일본어. 한자 사전, 번역기, 단어장, JLPT N5–N1 연습, 짧은 이야기와 영상.</p>
+<p class="text-[14px] text-[#555]">ji-miso.com · 지원 언어: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
+<a href="https://ji-miso.com">웹사이트 열기</a>
 </article>
-<article id="zh_CN" lang="zh-Hans" class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm space-y-4 sm:p-8" hidden>
-<h1 class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Ji Miso</h1>
-<p class="text-lg text-slate-700">通过游戏和阅读学日语：带汉字的词典、翻译、单词本、JLPT N5–N1 练习、短篇故事和视频。</p>
-<p class="text-sm leading-relaxed text-slate-600">ji-miso.com · 支持语言: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
-<a href="https://ji-miso.com" class="inline-flex items-center gap-2 rounded-xl bg-emerald-700 px-5 py-3 font-semibold text-white shadow-sm hover:bg-emerald-800 focus-visible:outline-2 focus-visible:outline-emerald-600">访问网站 <span aria-hidden="true">↗</span></a>
+<article id="zh_CN" lang="zh-Hans" hidden>
+<h1>Ji Miso</h1>
+<p>通过游戏和阅读学日语：带汉字的词典、翻译、单词本、JLPT N5–N1 练习、短篇故事和视频。</p>
+<p class="text-[14px] text-[#555]">ji-miso.com · 支持语言: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
+<a href="https://ji-miso.com">访问网站</a>
 </article>
-<article id="zh_TW" lang="zh-Hant" class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm space-y-4 sm:p-8" hidden>
-<h1 class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Ji Miso</h1>
-<p class="text-lg text-slate-700">透過遊戲和閱讀學日語：附漢字的辭典、翻譯、單字本、JLPT N5–N1 練習、短篇故事和影片。</p>
-<p class="text-sm leading-relaxed text-slate-600">ji-miso.com · 支援語言: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
-<a href="https://ji-miso.com" class="inline-flex items-center gap-2 rounded-xl bg-emerald-700 px-5 py-3 font-semibold text-white shadow-sm hover:bg-emerald-800 focus-visible:outline-2 focus-visible:outline-emerald-600">造訪網站 <span aria-hidden="true">↗</span></a>
+<article id="zh_TW" lang="zh-Hant" hidden>
+<h1>Ji Miso</h1>
+<p>透過遊戲和閱讀學日語：附漢字的辭典、翻譯、單字本、JLPT N5–N1 練習、短篇故事和影片。</p>
+<p class="text-[14px] text-[#555]">ji-miso.com · 支援語言: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
+<a href="https://ji-miso.com">造訪網站</a>
 </article>
-<article id="fr" lang="fr" class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm space-y-4 sm:p-8" hidden>
-<h1 class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Ji Miso</h1>
-<p class="text-lg text-slate-700">Apprendre le japonais en jouant et en lisant : dictionnaire avec kanji, traducteur, carnet de vocabulaire, entraînement JLPT N5–N1, histoires courtes et vidéos.</p>
-<p class="text-sm leading-relaxed text-slate-600">ji-miso.com · Langues: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
-<a href="https://ji-miso.com" class="inline-flex items-center gap-2 rounded-xl bg-emerald-700 px-5 py-3 font-semibold text-white shadow-sm hover:bg-emerald-800 focus-visible:outline-2 focus-visible:outline-emerald-600">Visiter le site <span aria-hidden="true">↗</span></a>
+<article id="fr" lang="fr" hidden>
+<h1>Ji Miso</h1>
+<p>Apprendre le japonais en jouant et en lisant : dictionnaire avec kanji, traducteur, carnet de vocabulaire, entraînement JLPT N5–N1, histoires courtes et vidéos.</p>
+<p class="text-[14px] text-[#555]">ji-miso.com · Langues: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
+<a href="https://ji-miso.com">Visiter le site</a>
 </article>
-<article id="de" lang="de" class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm space-y-4 sm:p-8" hidden>
-<h1 class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Ji Miso</h1>
-<p class="text-lg text-slate-700">Japanisch lernen mit Spielen und Lesestoff: Wörterbuch mit Kanji, Übersetzer, Vokabelheft, JLPT-Übungen N5–N1, Kurzgeschichten und Videos.</p>
-<p class="text-sm leading-relaxed text-slate-600">ji-miso.com · Sprachen: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
-<a href="https://ji-miso.com" class="inline-flex items-center gap-2 rounded-xl bg-emerald-700 px-5 py-3 font-semibold text-white shadow-sm hover:bg-emerald-800 focus-visible:outline-2 focus-visible:outline-emerald-600">Website öffnen <span aria-hidden="true">↗</span></a>
+<article id="de" lang="de" hidden>
+<h1>Ji Miso</h1>
+<p>Japanisch lernen mit Spielen und Lesestoff: Wörterbuch mit Kanji, Übersetzer, Vokabelheft, JLPT-Übungen N5–N1, Kurzgeschichten und Videos.</p>
+<p class="text-[14px] text-[#555]">ji-miso.com · Sprachen: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
+<a href="https://ji-miso.com">Website öffnen</a>
 </article>
-<article id="th" lang="th" class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm space-y-4 sm:p-8" hidden>
-<h1 class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Ji Miso</h1>
-<p class="text-lg text-slate-700">เรียนภาษาญี่ปุ่นผ่านเกมและการอ่าน พจนานุกรมพร้อมคันจิ เครื่องแปล สมุดคำศัพท์ ฝึก JLPT N5–N1 เรื่องสั้น และวิดีโอ</p>
-<p class="text-sm leading-relaxed text-slate-600">ji-miso.com · ภาษา: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
-<a href="https://ji-miso.com" class="inline-flex items-center gap-2 rounded-xl bg-emerald-700 px-5 py-3 font-semibold text-white shadow-sm hover:bg-emerald-800 focus-visible:outline-2 focus-visible:outline-emerald-600">เปิดเว็บไซต์ <span aria-hidden="true">↗</span></a>
+<article id="th" lang="th" hidden>
+<h1>Ji Miso</h1>
+<p>เรียนภาษาญี่ปุ่นผ่านเกมและการอ่าน พจนานุกรมพร้อมคันจิ เครื่องแปล สมุดคำศัพท์ ฝึก JLPT N5–N1 เรื่องสั้น และวิดีโอ</p>
+<p class="text-[14px] text-[#555]">ji-miso.com · ภาษา: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
+<a href="https://ji-miso.com">เปิดเว็บไซต์</a>
 </article>
-<article id="km" lang="km" class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm space-y-4 sm:p-8" hidden>
-<h1 class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Ji Miso</h1>
-<p class="text-lg text-slate-700">រៀនភាសាជប៉ុនតាមរយៈហ្គេម និងការអាន៖ វចនានុក្រមមានកាន់ជិ ឧបករណ៍បកប្រែ សៀវភៅពាក្យ ហាត់ JLPT N5–N1 រឿងខ្លី និងវីដេអូ។</p>
-<p class="text-sm leading-relaxed text-slate-600">ji-miso.com · ភាសា: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
-<a href="https://ji-miso.com" class="inline-flex items-center gap-2 rounded-xl bg-emerald-700 px-5 py-3 font-semibold text-white shadow-sm hover:bg-emerald-800 focus-visible:outline-2 focus-visible:outline-emerald-600">បើកគេហទំព័រ <span aria-hidden="true">↗</span></a>
+<article id="km" lang="km" hidden>
+<h1>Ji Miso</h1>
+<p>រៀនភាសាជប៉ុនតាមរយៈហ្គេម និងការអាន៖ វចនានុក្រមមានកាន់ជិ ឧបករណ៍បកប្រែ សៀវភៅពាក្យ ហាត់ JLPT N5–N1 រឿងខ្លី និងវីដេអូ។</p>
+<p class="text-[14px] text-[#555]">ji-miso.com · ភាសា: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
+<a href="https://ji-miso.com">បើកគេហទំព័រ</a>
 </article>
 </main>
-<footer class="mt-8 border-t border-slate-200 pt-4 text-sm text-slate-500">© vominhthongss</footer>
+<footer class="text-[14px] text-[#555] [border-top:1px_solid_#ddd] mt-[16px] pt-[12px]">© vominhthongss</footer>
 </body>
 </html>

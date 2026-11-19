@@ -8,342 +8,342 @@
 <link rel="stylesheet" href="assets/tailwind.css">
 <script src="assets/site.js" defer></script>
 </head>
-<body class="mx-auto min-h-screen max-w-6xl bg-slate-50 px-4 py-6 font-sans leading-relaxed text-slate-800 sm:px-8 sm:py-10">
-<header class="mb-6 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
-  <a data-local-link href="index.html" class="mb-3 inline-block text-lg font-bold text-slate-900">vominhthongss</a>
-  <nav aria-label="Projects" class="flex flex-wrap gap-1">
-    <a data-local-link data-home-label href="index.html" aria-current="page" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-[current=page]:bg-emerald-100 aria-[current=page]:text-emerald-900">Home</a>
-    <a data-local-link href="lofi-garden/index.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-[current=page]:bg-emerald-100 aria-[current=page]:text-emerald-900">Lofi Garden</a>
-    <a data-local-link href="karimen-honmen/index.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-[current=page]:bg-emerald-100 aria-[current=page]:text-emerald-900">Karimen &amp; Honmen</a>
-    <a data-local-link href="ji-miso/index.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-[current=page]:bg-emerald-100 aria-[current=page]:text-emerald-900">Ji Miso</a>
-    <a data-local-link href="nail-view/index.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-[current=page]:bg-emerald-100 aria-[current=page]:text-emerald-900">Nail View</a>
-    <a data-local-link href="onthitotnghiep/index.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-[current=page]:bg-emerald-100 aria-[current=page]:text-emerald-900">Ôn Thi Tốt Nghiệp</a>
+<body class="mx-auto my-0 max-w-[760px] px-[20px] pt-[16px] pb-[40px] bg-white text-black leading-[1.6]">
+<header>
+  <div class="text-[14px] text-[#555]">vominhthongss</div>
+  <nav aria-label="Projects" class="mb-[8px] flex flex-wrap gap-x-[12px]">
+    <a data-local-link data-home-label href="index.html" aria-current="page" class="aria-[current=page]:font-bold">Home</a>
+    <a data-local-link href="lofi-garden/index.html" class="aria-[current=page]:font-bold">Lofi Garden</a>
+    <a data-local-link href="karimen-honmen/index.html" class="aria-[current=page]:font-bold">Karimen &amp; Honmen</a>
+    <a data-local-link href="ji-miso/index.html" class="aria-[current=page]:font-bold">Ji Miso</a>
+    <a data-local-link href="nail-view/index.html" class="aria-[current=page]:font-bold">Nail View</a>
+    <a data-local-link href="onthitotnghiep/index.html" class="aria-[current=page]:font-bold">Ôn Thi Tốt Nghiệp</a>
   </nav>
 </header>
-<nav class="mb-6 flex flex-wrap gap-2" aria-label="Language">
-  <button type="button" data-lang="en" aria-pressed="true" class="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-emerald-600 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-pressed:border-emerald-700 aria-pressed:bg-emerald-700 aria-pressed:text-white">English</button>
-  <button type="button" data-lang="vi" aria-pressed="false" class="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-emerald-600 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-pressed:border-emerald-700 aria-pressed:bg-emerald-700 aria-pressed:text-white">Tiếng Việt</button>
-  <button type="button" data-lang="ja" aria-pressed="false" class="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-emerald-600 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-pressed:border-emerald-700 aria-pressed:bg-emerald-700 aria-pressed:text-white">日本語</button>
-  <button type="button" data-lang="ko" aria-pressed="false" class="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-emerald-600 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-pressed:border-emerald-700 aria-pressed:bg-emerald-700 aria-pressed:text-white">한국어</button>
-  <button type="button" data-lang="zh_CN" aria-pressed="false" class="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-emerald-600 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-pressed:border-emerald-700 aria-pressed:bg-emerald-700 aria-pressed:text-white">简体中文</button>
-  <button type="button" data-lang="zh_TW" aria-pressed="false" class="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-emerald-600 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-pressed:border-emerald-700 aria-pressed:bg-emerald-700 aria-pressed:text-white">繁體中文</button>
-  <button type="button" data-lang="fr" aria-pressed="false" class="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-emerald-600 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-pressed:border-emerald-700 aria-pressed:bg-emerald-700 aria-pressed:text-white">Français</button>
-  <button type="button" data-lang="de" aria-pressed="false" class="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-emerald-600 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-pressed:border-emerald-700 aria-pressed:bg-emerald-700 aria-pressed:text-white">Deutsch</button>
-  <button type="button" data-lang="th" aria-pressed="false" class="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-emerald-600 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-pressed:border-emerald-700 aria-pressed:bg-emerald-700 aria-pressed:text-white">ไทย</button>
-  <button type="button" data-lang="km" aria-pressed="false" class="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:border-emerald-600 focus-visible:outline-2 focus-visible:outline-emerald-600 aria-pressed:border-emerald-700 aria-pressed:bg-emerald-700 aria-pressed:text-white">ខ្មែរ</button>
+<nav class="mt-[8px] mb-[16px]" aria-label="Language">
+  <button type="button" data-lang="en" aria-pressed="true" class="mr-[4px] mb-[6px] aria-pressed:font-bold">English</button>
+  <button type="button" data-lang="vi" aria-pressed="false" class="mr-[4px] mb-[6px] aria-pressed:font-bold">Tiếng Việt</button>
+  <button type="button" data-lang="ja" aria-pressed="false" class="mr-[4px] mb-[6px] aria-pressed:font-bold">日本語</button>
+  <button type="button" data-lang="ko" aria-pressed="false" class="mr-[4px] mb-[6px] aria-pressed:font-bold">한국어</button>
+  <button type="button" data-lang="zh_CN" aria-pressed="false" class="mr-[4px] mb-[6px] aria-pressed:font-bold">简体中文</button>
+  <button type="button" data-lang="zh_TW" aria-pressed="false" class="mr-[4px] mb-[6px] aria-pressed:font-bold">繁體中文</button>
+  <button type="button" data-lang="fr" aria-pressed="false" class="mr-[4px] mb-[6px] aria-pressed:font-bold">Français</button>
+  <button type="button" data-lang="de" aria-pressed="false" class="mr-[4px] mb-[6px] aria-pressed:font-bold">Deutsch</button>
+  <button type="button" data-lang="th" aria-pressed="false" class="mr-[4px] mb-[6px] aria-pressed:font-bold">ไทย</button>
+  <button type="button" data-lang="km" aria-pressed="false" class="mr-[4px] mb-[6px] aria-pressed:font-bold">ខ្មែរ</button>
 </nav>
 <main>
-<article id="en" lang="en" class="space-y-4">
-<h1 class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Web apps &amp; games by vominhthongss</h1>
-<p class="max-w-3xl text-lg text-slate-600">Free websites and games I build for learning and everyday life.</p>
-<ul class="grid gap-4 pt-3 sm:grid-cols-2 lg:grid-cols-3">
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="lofi-garden/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Lofi Garden <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">A cozy lofi farming game for phones: grow vegetables in real time, catch bugs and relax after work.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">Android · iOS · Languages: English · Tiếng Việt · 日本語 · 한국어 · 简体中文 · 繁體中文 · Français · Deutsch · ไทย · ខ្មែរ</p>
+<article id="en" lang="en">
+<h1>Web apps &amp; games by vominhthongss</h1>
+<p>Free websites and games I build for learning and everyday life.</p>
+<ul class="list-none m-0 p-0">
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="lofi-garden/index.html">Lofi Garden</a></h2>
+  <p class="mt-0 mb-[4px]">A cozy lofi farming game for phones: grow vegetables in real time, catch bugs and relax after work.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">Android · iOS · Languages: English · Tiếng Việt · 日本語 · 한국어 · 简体中文 · 繁體中文 · Français · Deutsch · ไทย · ខ្មែរ</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="karimen-honmen/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Karimen &amp; Honmen <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">Free practice for Japan’s driver’s license theory tests (provisional, full, motorcycle and moped): sample exams with instant grading and explanations, a driving simulator and a test center finder.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">karimen-honmen.com · Languages: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文 · Português</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="karimen-honmen/index.html">Karimen &amp; Honmen</a></h2>
+  <p class="mt-0 mb-[4px]">Free practice for Japan’s driver’s license theory tests (provisional, full, motorcycle and moped): sample exams with instant grading and explanations, a driving simulator and a test center finder.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">karimen-honmen.com · Languages: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文 · Português</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="ji-miso/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Ji Miso <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">Learn Japanese through games and reading: a dictionary with kanji, a translator, a vocabulary notebook, JLPT N5–N1 practice, short stories and videos.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">ji-miso.com · Languages: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="ji-miso/index.html">Ji Miso</a></h2>
+  <p class="mt-0 mb-[4px]">Learn Japanese through games and reading: a dictionary with kanji, a translator, a vocabulary notebook, JLPT N5–N1 practice, short stories and videos.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">ji-miso.com · Languages: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="nail-view/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Nail View <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">Nail design ideas sorted by style, color, shape and length, plus color palettes, trends and simple nail care guides.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">nail-view.com · Languages: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="nail-view/index.html">Nail View</a></h2>
+  <p class="mt-0 mb-[4px]">Nail design ideas sorted by style, color, shape and length, plus color palettes, trends and simple nail care guides.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">nail-view.com · Languages: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="onthitotnghiep/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Ôn Thi Tốt Nghiệp <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">Free online practice for Vietnam’s high school graduation exam (THPT): timed tests in many subjects, scoring, answers with explanations and study tips.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">onthitotnghiep.com · Languages: Tiếng Việt</p>
-</li>
-</ul>
-</article>
-<article id="vi" lang="vi" class="space-y-4" hidden>
-<h1 class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Các web app và game của vominhthongss</h1>
-<p class="max-w-3xl text-lg text-slate-600">Những trang web và trò chơi miễn phí tôi làm để phục vụ việc học và cuộc sống hằng ngày.</p>
-<ul class="grid gap-4 pt-3 sm:grid-cols-2 lg:grid-cols-3">
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="lofi-garden/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Lofi Garden <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">Game nông trại lofi thư giãn trên điện thoại: trồng rau theo thời gian thật, bắt sâu, nghỉ ngơi sau giờ làm.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">Android · iOS · Ngôn ngữ: English · Tiếng Việt · 日本語 · 한국어 · 简体中文 · 繁體中文 · Français · Deutsch · ไทย · ខ្មែរ</p>
-</li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="karimen-honmen/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Karimen &amp; Honmen <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">Luyện thi lý thuyết bằng lái xe tại Nhật miễn phí (Karimen, Honmen, xe máy): đề mẫu chấm điểm ngay kèm giải thích, mô phỏng lái xe và tra cứu trung tâm sát hạch.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">karimen-honmen.com · Ngôn ngữ: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文 · Português</p>
-</li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="ji-miso/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Ji Miso <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">Học tiếng Nhật qua trò chơi và bài đọc: từ điển kèm kanji, dịch câu, sổ từ vựng, luyện JLPT N5–N1, truyện ngắn và video.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">ji-miso.com · Ngôn ngữ: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
-</li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="nail-view/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Nail View <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">Ý tưởng mẫu nail theo phong cách, màu sắc, dáng và độ dài móng, kèm bảng màu, xu hướng và hướng dẫn chăm sóc móng.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">nail-view.com · Ngôn ngữ: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文</p>
-</li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="onthitotnghiep/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Ôn Thi Tốt Nghiệp <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">Luyện đề thi tốt nghiệp THPT miễn phí: đề thi nhiều môn có bấm giờ, chấm điểm, đáp án kèm lời giải và bí quyết ôn thi.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">onthitotnghiep.com · Ngôn ngữ: Tiếng Việt</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="onthitotnghiep/index.html">Ôn Thi Tốt Nghiệp</a></h2>
+  <p class="mt-0 mb-[4px]">Free online practice for Vietnam’s high school graduation exam (THPT): timed tests in many subjects, scoring, answers with explanations and study tips.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">onthitotnghiep.com · Languages: Tiếng Việt</p>
 </li>
 </ul>
 </article>
-<article id="ja" lang="ja" class="space-y-4" hidden>
-<h1 class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">vominhthongss のウェブアプリとゲーム</h1>
-<p class="max-w-3xl text-lg text-slate-600">学習や日々の暮らしに役立つ、無料のウェブサイトとゲームを作っています。</p>
-<ul class="grid gap-4 pt-3 sm:grid-cols-2 lg:grid-cols-3">
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="lofi-garden/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Lofi Garden <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">スマホ向けの癒やし系 lofi 農園ゲーム。現実の時間で野菜を育て、虫をつかまえ、仕事帰りにほっとひと息。</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">Android · iOS · 対応言語: English · Tiếng Việt · 日本語 · 한국어 · 简体中文 · 繁體中文 · Français · Deutsch · ไทย · ខ្មែរ</p>
+<article id="vi" lang="vi" hidden>
+<h1>Các web app và game của vominhthongss</h1>
+<p>Những trang web và trò chơi miễn phí tôi làm để phục vụ việc học và cuộc sống hằng ngày.</p>
+<ul class="list-none m-0 p-0">
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="lofi-garden/index.html">Lofi Garden</a></h2>
+  <p class="mt-0 mb-[4px]">Game nông trại lofi thư giãn trên điện thoại: trồng rau theo thời gian thật, bắt sâu, nghỉ ngơi sau giờ làm.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">Android · iOS · Ngôn ngữ: English · Tiếng Việt · 日本語 · 한국어 · 简体中文 · 繁體中文 · Français · Deutsch · ไทย · ខ្មែរ</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="karimen-honmen/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Karimen &amp; Honmen <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">日本の運転免許学科試験（仮免・本免・二輪・原付）を無料で練習。採点と解説つきの模擬試験、運転シミュレーター、試験場検索も。</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">karimen-honmen.com · 対応言語: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文 · Português</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="karimen-honmen/index.html">Karimen &amp; Honmen</a></h2>
+  <p class="mt-0 mb-[4px]">Luyện thi lý thuyết bằng lái xe tại Nhật miễn phí (Karimen, Honmen, xe máy): đề mẫu chấm điểm ngay kèm giải thích, mô phỏng lái xe và tra cứu trung tâm sát hạch.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">karimen-honmen.com · Ngôn ngữ: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文 · Português</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="ji-miso/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Ji Miso <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">ゲームや読みものを通して日本語を学ぶサイト。漢字つき辞書、翻訳、単語帳、JLPT N5〜N1 練習、短いお話や動画。</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">ji-miso.com · 対応言語: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="ji-miso/index.html">Ji Miso</a></h2>
+  <p class="mt-0 mb-[4px]">Học tiếng Nhật qua trò chơi và bài đọc: từ điển kèm kanji, dịch câu, sổ từ vựng, luyện JLPT N5–N1, truyện ngắn và video.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">ji-miso.com · Ngôn ngữ: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="nail-view/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Nail View <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">スタイル・色・形・長さ別のネイルデザインのアイデア集。カラーパレット、トレンド、かんたんなネイルケアも。</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">nail-view.com · 対応言語: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="nail-view/index.html">Nail View</a></h2>
+  <p class="mt-0 mb-[4px]">Ý tưởng mẫu nail theo phong cách, màu sắc, dáng và độ dài móng, kèm bảng màu, xu hướng và hướng dẫn chăm sóc móng.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">nail-view.com · Ngôn ngữ: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="onthitotnghiep/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Ôn Thi Tốt Nghiệp <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">ベトナムの高校卒業試験（THPT）を無料でオンライン練習。多教科の時間制限つき模擬試験、採点、解説つき解答、勉強のコツ。</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">onthitotnghiep.com · 対応言語: Tiếng Việt</p>
-</li>
-</ul>
-</article>
-<article id="ko" lang="ko" class="space-y-4" hidden>
-<h1 class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">vominhthongss의 웹 앱과 게임</h1>
-<p class="max-w-3xl text-lg text-slate-600">공부와 일상에 도움이 되는 무료 웹사이트와 게임을 만들고 있어요.</p>
-<ul class="grid gap-4 pt-3 sm:grid-cols-2 lg:grid-cols-3">
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="lofi-garden/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Lofi Garden <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">휴대폰용 힐링 lofi 농장 게임. 실제 시간에 맞춰 채소를 키우고, 벌레를 잡으며 퇴근 후 쉬어 가세요.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">Android · iOS · 지원 언어: English · Tiếng Việt · 日本語 · 한국어 · 简体中文 · 繁體中文 · Français · Deutsch · ไทย · ខ្មែរ</p>
-</li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="karimen-honmen/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Karimen &amp; Honmen <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">일본 운전면허 학과시험(가면허·본면허·이륜·원동기) 무료 연습. 즉시 채점과 해설이 있는 모의고사, 운전 시뮬레이터, 시험장 찾기.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">karimen-honmen.com · 지원 언어: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文 · Português</p>
-</li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="ji-miso/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Ji Miso <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">게임과 읽을거리로 배우는 일본어. 한자 사전, 번역기, 단어장, JLPT N5–N1 연습, 짧은 이야기와 영상.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">ji-miso.com · 지원 언어: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
-</li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="nail-view/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Nail View <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">스타일·색상·모양·길이별 네일 디자인 아이디어. 컬러 팔레트, 트렌드, 간단한 네일 관리 가이드도 있어요.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">nail-view.com · 지원 언어: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文</p>
-</li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="onthitotnghiep/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Ôn Thi Tốt Nghiệp <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">베트남 고등학교 졸업시험(THPT) 무료 온라인 연습. 여러 과목의 시간제 모의고사, 채점, 해설이 있는 정답, 공부 팁.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">onthitotnghiep.com · 지원 언어: Tiếng Việt</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="onthitotnghiep/index.html">Ôn Thi Tốt Nghiệp</a></h2>
+  <p class="mt-0 mb-[4px]">Luyện đề thi tốt nghiệp THPT miễn phí: đề thi nhiều môn có bấm giờ, chấm điểm, đáp án kèm lời giải và bí quyết ôn thi.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">onthitotnghiep.com · Ngôn ngữ: Tiếng Việt</p>
 </li>
 </ul>
 </article>
-<article id="zh_CN" lang="zh-Hans" class="space-y-4" hidden>
-<h1 class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">vominhthongss 的网页应用和游戏</h1>
-<p class="max-w-3xl text-lg text-slate-600">我制作的免费网站和游戏，帮助学习和日常生活。</p>
-<ul class="grid gap-4 pt-3 sm:grid-cols-2 lg:grid-cols-3">
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="lofi-garden/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Lofi Garden <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">一款治愈系 lofi 手机种田游戏：按真实时间种菜、抓虫，下班后放松一下。</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">Android · iOS · 支持语言: English · Tiếng Việt · 日本語 · 한국어 · 简体中文 · 繁體中文 · Français · Deutsch · ไทย · ខ្មែរ</p>
+<article id="ja" lang="ja" hidden>
+<h1>vominhthongss のウェブアプリとゲーム</h1>
+<p>学習や日々の暮らしに役立つ、無料のウェブサイトとゲームを作っています。</p>
+<ul class="list-none m-0 p-0">
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="lofi-garden/index.html">Lofi Garden</a></h2>
+  <p class="mt-0 mb-[4px]">スマホ向けの癒やし系 lofi 農園ゲーム。現実の時間で野菜を育て、虫をつかまえ、仕事帰りにほっとひと息。</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">Android · iOS · 対応言語: English · Tiếng Việt · 日本語 · 한국어 · 简体中文 · 繁體中文 · Français · Deutsch · ไทย · ខ្មែរ</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="karimen-honmen/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Karimen &amp; Honmen <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">免费练习日本驾照笔试（临时驾照、正式驾照、摩托车、原付）：即时评分并附解析的模拟题、驾驶模拟器和考场查询。</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">karimen-honmen.com · 支持语言: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文 · Português</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="karimen-honmen/index.html">Karimen &amp; Honmen</a></h2>
+  <p class="mt-0 mb-[4px]">日本の運転免許学科試験（仮免・本免・二輪・原付）を無料で練習。採点と解説つきの模擬試験、運転シミュレーター、試験場検索も。</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">karimen-honmen.com · 対応言語: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文 · Português</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="ji-miso/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Ji Miso <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">通过游戏和阅读学日语：带汉字的词典、翻译、单词本、JLPT N5–N1 练习、短篇故事和视频。</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">ji-miso.com · 支持语言: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="ji-miso/index.html">Ji Miso</a></h2>
+  <p class="mt-0 mb-[4px]">ゲームや読みものを通して日本語を学ぶサイト。漢字つき辞書、翻訳、単語帳、JLPT N5〜N1 練習、短いお話や動画。</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">ji-miso.com · 対応言語: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="nail-view/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Nail View <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">按风格、颜色、甲型和长度分类的美甲灵感，还有配色、流行趋势和简单的护甲指南。</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">nail-view.com · 支持语言: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="nail-view/index.html">Nail View</a></h2>
+  <p class="mt-0 mb-[4px]">スタイル・色・形・長さ別のネイルデザインのアイデア集。カラーパレット、トレンド、かんたんなネイルケアも。</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">nail-view.com · 対応言語: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="onthitotnghiep/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Ôn Thi Tốt Nghiệp <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">免费在线练习越南高中毕业考试（THPT）：多科限时模拟题、评分、附解析的答案和备考技巧。</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">onthitotnghiep.com · 支持语言: Tiếng Việt</p>
-</li>
-</ul>
-</article>
-<article id="zh_TW" lang="zh-Hant" class="space-y-4" hidden>
-<h1 class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">vominhthongss 的網頁應用程式和遊戲</h1>
-<p class="max-w-3xl text-lg text-slate-600">我製作的免費網站和遊戲，幫助學習和日常生活。</p>
-<ul class="grid gap-4 pt-3 sm:grid-cols-2 lg:grid-cols-3">
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="lofi-garden/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Lofi Garden <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">一款療癒系 lofi 手機種田遊戲：依真實時間種菜、抓蟲，下班後放鬆一下。</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">Android · iOS · 支援語言: English · Tiếng Việt · 日本語 · 한국어 · 简体中文 · 繁體中文 · Français · Deutsch · ไทย · ខ្មែរ</p>
-</li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="karimen-honmen/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Karimen &amp; Honmen <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">免費練習日本駕照筆試（臨時駕照、正式駕照、機車、原付）：即時評分並附解析的模擬題、駕駛模擬器和考場查詢。</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">karimen-honmen.com · 支援語言: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文 · Português</p>
-</li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="ji-miso/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Ji Miso <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">透過遊戲和閱讀學日語：附漢字的辭典、翻譯、單字本、JLPT N5–N1 練習、短篇故事和影片。</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">ji-miso.com · 支援語言: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
-</li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="nail-view/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Nail View <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">依風格、顏色、甲型和長度分類的美甲靈感，還有配色、流行趨勢和簡單的護甲指南。</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">nail-view.com · 支援語言: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文</p>
-</li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="onthitotnghiep/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Ôn Thi Tốt Nghiệp <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">免費線上練習越南高中畢業考試（THPT）：多科限時模擬題、評分、附解析的答案和備考技巧。</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">onthitotnghiep.com · 支援語言: Tiếng Việt</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="onthitotnghiep/index.html">Ôn Thi Tốt Nghiệp</a></h2>
+  <p class="mt-0 mb-[4px]">ベトナムの高校卒業試験（THPT）を無料でオンライン練習。多教科の時間制限つき模擬試験、採点、解説つき解答、勉強のコツ。</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">onthitotnghiep.com · 対応言語: Tiếng Việt</p>
 </li>
 </ul>
 </article>
-<article id="fr" lang="fr" class="space-y-4" hidden>
-<h1 class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Applications web et jeux de vominhthongss</h1>
-<p class="max-w-3xl text-lg text-slate-600">Des sites web et des jeux gratuits que je crée pour apprendre et pour le quotidien.</p>
-<ul class="grid gap-4 pt-3 sm:grid-cols-2 lg:grid-cols-3">
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="lofi-garden/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Lofi Garden <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">Un jeu de jardinage lofi tout doux sur mobile : cultivez des légumes en temps réel, attrapez des chenilles et détendez-vous après le travail.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">Android · iOS · Langues: English · Tiếng Việt · 日本語 · 한국어 · 简体中文 · 繁體中文 · Français · Deutsch · ไทย · ខ្មែរ</p>
+<article id="ko" lang="ko" hidden>
+<h1>vominhthongss의 웹 앱과 게임</h1>
+<p>공부와 일상에 도움이 되는 무료 웹사이트와 게임을 만들고 있어요.</p>
+<ul class="list-none m-0 p-0">
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="lofi-garden/index.html">Lofi Garden</a></h2>
+  <p class="mt-0 mb-[4px]">휴대폰용 힐링 lofi 농장 게임. 실제 시간에 맞춰 채소를 키우고, 벌레를 잡으며 퇴근 후 쉬어 가세요.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">Android · iOS · 지원 언어: English · Tiếng Việt · 日本語 · 한국어 · 简体中文 · 繁體中文 · Français · Deutsch · ไทย · ខ្មែរ</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="karimen-honmen/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Karimen &amp; Honmen <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">Entraînement gratuit aux examens théoriques du permis japonais (provisoire, définitif, moto, cyclomoteur) : examens blancs corrigés et expliqués, simulateur de conduite et recherche de centres d’examen.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">karimen-honmen.com · Langues: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文 · Português</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="karimen-honmen/index.html">Karimen &amp; Honmen</a></h2>
+  <p class="mt-0 mb-[4px]">일본 운전면허 학과시험(가면허·본면허·이륜·원동기) 무료 연습. 즉시 채점과 해설이 있는 모의고사, 운전 시뮬레이터, 시험장 찾기.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">karimen-honmen.com · 지원 언어: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文 · Português</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="ji-miso/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Ji Miso <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">Apprendre le japonais en jouant et en lisant : dictionnaire avec kanji, traducteur, carnet de vocabulaire, entraînement JLPT N5–N1, histoires courtes et vidéos.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">ji-miso.com · Langues: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="ji-miso/index.html">Ji Miso</a></h2>
+  <p class="mt-0 mb-[4px]">게임과 읽을거리로 배우는 일본어. 한자 사전, 번역기, 단어장, JLPT N5–N1 연습, 짧은 이야기와 영상.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">ji-miso.com · 지원 언어: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="nail-view/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Nail View <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">Des idées de nail art classées par style, couleur, forme et longueur, avec palettes de couleurs, tendances et conseils de soin.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">nail-view.com · Langues: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="nail-view/index.html">Nail View</a></h2>
+  <p class="mt-0 mb-[4px]">스타일·색상·모양·길이별 네일 디자인 아이디어. 컬러 팔레트, 트렌드, 간단한 네일 관리 가이드도 있어요.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">nail-view.com · 지원 언어: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="onthitotnghiep/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Ôn Thi Tốt Nghiệp <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">Entraînement gratuit en ligne au baccalauréat vietnamien (THPT) : épreuves chronométrées dans plusieurs matières, notation, corrigés expliqués et conseils de révision.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">onthitotnghiep.com · Langues: Tiếng Việt</p>
-</li>
-</ul>
-</article>
-<article id="de" lang="de" class="space-y-4" hidden>
-<h1 class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Web-Apps und Spiele von vominhthongss</h1>
-<p class="max-w-3xl text-lg text-slate-600">Kostenlose Websites und Spiele, die ich zum Lernen und für den Alltag baue.</p>
-<ul class="grid gap-4 pt-3 sm:grid-cols-2 lg:grid-cols-3">
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="lofi-garden/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Lofi Garden <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">Ein gemütliches Lofi-Gartenspiel fürs Handy: Gemüse in Echtzeit anbauen, Raupen fangen und nach Feierabend entspannen.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">Android · iOS · Sprachen: English · Tiếng Việt · 日本語 · 한국어 · 简体中文 · 繁體中文 · Français · Deutsch · ไทย · ខ្មែរ</p>
-</li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="karimen-honmen/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Karimen &amp; Honmen <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">Kostenloses Üben für die japanische Führerschein-Theorieprüfung (vorläufig, endgültig, Motorrad, Moped): Probeprüfungen mit sofortiger Auswertung und Erklärungen, Fahrsimulator und Prüfstellensuche.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">karimen-honmen.com · Sprachen: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文 · Português</p>
-</li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="ji-miso/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Ji Miso <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">Japanisch lernen mit Spielen und Lesestoff: Wörterbuch mit Kanji, Übersetzer, Vokabelheft, JLPT-Übungen N5–N1, Kurzgeschichten und Videos.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">ji-miso.com · Sprachen: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
-</li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="nail-view/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Nail View <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">Nageldesign-Ideen nach Stil, Farbe, Form und Länge, dazu Farbpaletten, Trends und einfache Nagelpflege-Tipps.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">nail-view.com · Sprachen: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文</p>
-</li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="onthitotnghiep/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Ôn Thi Tốt Nghiệp <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">Kostenloses Online-Training für die vietnamesische Abiturprüfung (THPT): zeitgestoppte Tests in vielen Fächern, Bewertung, Lösungen mit Erklärungen und Lerntipps.</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">onthitotnghiep.com · Sprachen: Tiếng Việt</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="onthitotnghiep/index.html">Ôn Thi Tốt Nghiệp</a></h2>
+  <p class="mt-0 mb-[4px]">베트남 고등학교 졸업시험(THPT) 무료 온라인 연습. 여러 과목의 시간제 모의고사, 채점, 해설이 있는 정답, 공부 팁.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">onthitotnghiep.com · 지원 언어: Tiếng Việt</p>
 </li>
 </ul>
 </article>
-<article id="th" lang="th" class="space-y-4" hidden>
-<h1 class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">เว็บแอปและเกมของ vominhthongss</h1>
-<p class="max-w-3xl text-lg text-slate-600">เว็บไซต์และเกมฟรีที่ผมสร้างขึ้นเพื่อการเรียนรู้และชีวิตประจำวัน</p>
-<ul class="grid gap-4 pt-3 sm:grid-cols-2 lg:grid-cols-3">
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="lofi-garden/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Lofi Garden <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">เกมปลูกผัก lofi สุดชิลบนมือถือ ปลูกผักตามเวลาจริง จับหนอน และพักผ่อนหลังเลิกงาน</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">Android · iOS · ภาษา: English · Tiếng Việt · 日本語 · 한국어 · 简体中文 · 繁體中文 · Français · Deutsch · ไทย · ខ្មែរ</p>
+<article id="zh_CN" lang="zh-Hans" hidden>
+<h1>vominhthongss 的网页应用和游戏</h1>
+<p>我制作的免费网站和游戏，帮助学习和日常生活。</p>
+<ul class="list-none m-0 p-0">
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="lofi-garden/index.html">Lofi Garden</a></h2>
+  <p class="mt-0 mb-[4px]">一款治愈系 lofi 手机种田游戏：按真实时间种菜、抓虫，下班后放松一下。</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">Android · iOS · 支持语言: English · Tiếng Việt · 日本語 · 한국어 · 简体中文 · 繁體中文 · Français · Deutsch · ไทย · ខ្មែរ</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="karimen-honmen/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Karimen &amp; Honmen <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">ฝึกสอบทฤษฎีใบขับขี่ญี่ปุ่นฟรี (ชั่วคราว ตัวจริง มอเตอร์ไซค์ จักรยานยนต์เล็ก) ข้อสอบจำลองตรวจคะแนนทันทีพร้อมคำอธิบาย เครื่องจำลองการขับ และค้นหาศูนย์สอบ</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">karimen-honmen.com · ภาษา: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文 · Português</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="karimen-honmen/index.html">Karimen &amp; Honmen</a></h2>
+  <p class="mt-0 mb-[4px]">免费练习日本驾照笔试（临时驾照、正式驾照、摩托车、原付）：即时评分并附解析的模拟题、驾驶模拟器和考场查询。</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">karimen-honmen.com · 支持语言: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文 · Português</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="ji-miso/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Ji Miso <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">เรียนภาษาญี่ปุ่นผ่านเกมและการอ่าน พจนานุกรมพร้อมคันจิ เครื่องแปล สมุดคำศัพท์ ฝึก JLPT N5–N1 เรื่องสั้น และวิดีโอ</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">ji-miso.com · ภาษา: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="ji-miso/index.html">Ji Miso</a></h2>
+  <p class="mt-0 mb-[4px]">通过游戏和阅读学日语：带汉字的词典、翻译、单词本、JLPT N5–N1 练习、短篇故事和视频。</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">ji-miso.com · 支持语言: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="nail-view/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Nail View <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">ไอเดียลายเล็บแยกตามสไตล์ สี ทรง และความยาว พร้อมพาเลตสี เทรนด์ และวิธีดูแลเล็บง่าย ๆ</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">nail-view.com · ภาษา: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="nail-view/index.html">Nail View</a></h2>
+  <p class="mt-0 mb-[4px]">按风格、颜色、甲型和长度分类的美甲灵感，还有配色、流行趋势和简单的护甲指南。</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">nail-view.com · 支持语言: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="onthitotnghiep/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Ôn Thi Tốt Nghiệp <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">ฝึกทำข้อสอบจบมัธยมปลายของเวียดนาม (THPT) ออนไลน์ฟรี ข้อสอบจับเวลาหลายวิชา ตรวจคะแนน เฉลยพร้อมคำอธิบาย และเคล็ดลับการสอบ</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">onthitotnghiep.com · ภาษา: Tiếng Việt</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="onthitotnghiep/index.html">Ôn Thi Tốt Nghiệp</a></h2>
+  <p class="mt-0 mb-[4px]">免费在线练习越南高中毕业考试（THPT）：多科限时模拟题、评分、附解析的答案和备考技巧。</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">onthitotnghiep.com · 支持语言: Tiếng Việt</p>
 </li>
 </ul>
 </article>
-<article id="km" lang="km" class="space-y-4" hidden>
-<h1 class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">កម្មវិធីគេហទំព័រ និងហ្គេមរបស់ vominhthongss</h1>
-<p class="max-w-3xl text-lg text-slate-600">គេហទំព័រ និងហ្គេមឥតគិតថ្លៃដែលខ្ញុំបង្កើតសម្រាប់ការសិក្សា និងជីវិតប្រចាំថ្ងៃ។</p>
-<ul class="grid gap-4 pt-3 sm:grid-cols-2 lg:grid-cols-3">
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="lofi-garden/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Lofi Garden <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">ហ្គេមដាំដំណាំ lofi បែបសម្រាកលំហែលើទូរស័ព្ទ៖ ដាំបន្លែតាមពេលវេលាពិត ចាប់ដង្កូវ និងសម្រាកក្រោយម៉ោងធ្វើការ។</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">Android · iOS · ភាសា: English · Tiếng Việt · 日本語 · 한국어 · 简体中文 · 繁體中文 · Français · Deutsch · ไทย · ខ្មែរ</p>
+<article id="zh_TW" lang="zh-Hant" hidden>
+<h1>vominhthongss 的網頁應用程式和遊戲</h1>
+<p>我製作的免費網站和遊戲，幫助學習和日常生活。</p>
+<ul class="list-none m-0 p-0">
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="lofi-garden/index.html">Lofi Garden</a></h2>
+  <p class="mt-0 mb-[4px]">一款療癒系 lofi 手機種田遊戲：依真實時間種菜、抓蟲，下班後放鬆一下。</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">Android · iOS · 支援語言: English · Tiếng Việt · 日本語 · 한국어 · 简体中文 · 繁體中文 · Français · Deutsch · ไทย · ខ្មែរ</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="karimen-honmen/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Karimen &amp; Honmen <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">ហាត់ប្រឡងទ្រឹស្តីប័ណ្ណបើកបរនៅជប៉ុនដោយឥតគិតថ្លៃ (បណ្តោះអាសន្ន ពេញ ម៉ូតូ ម៉ូតូតូច)៖ វិញ្ញាសាគំរូដាក់ពិន្ទុភ្លាមៗ មានការពន្យល់ ឧបករណ៍ក្លែងការបើកបរ និងការស្វែងរកមណ្ឌលប្រឡង។</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">karimen-honmen.com · ភាសា: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文 · Português</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="karimen-honmen/index.html">Karimen &amp; Honmen</a></h2>
+  <p class="mt-0 mb-[4px]">免費練習日本駕照筆試（臨時駕照、正式駕照、機車、原付）：即時評分並附解析的模擬題、駕駛模擬器和考場查詢。</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">karimen-honmen.com · 支援語言: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文 · Português</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="ji-miso/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Ji Miso <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">រៀនភាសាជប៉ុនតាមរយៈហ្គេម និងការអាន៖ វចនានុក្រមមានកាន់ជិ ឧបករណ៍បកប្រែ សៀវភៅពាក្យ ហាត់ JLPT N5–N1 រឿងខ្លី និងវីដេអូ។</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">ji-miso.com · ភាសា: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="ji-miso/index.html">Ji Miso</a></h2>
+  <p class="mt-0 mb-[4px]">透過遊戲和閱讀學日語：附漢字的辭典、翻譯、單字本、JLPT N5–N1 練習、短篇故事和影片。</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">ji-miso.com · 支援語言: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="nail-view/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Nail View <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">គំនិតរចនាក្រចកតាមរចនាប័ទ្ម ពណ៌ រាង និងប្រវែង រួមទាំងក្ដារពណ៌ និន្នាការ និងការណែនាំថែទាំក្រចកងាយៗ។</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">nail-view.com · ភាសា: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="nail-view/index.html">Nail View</a></h2>
+  <p class="mt-0 mb-[4px]">依風格、顏色、甲型和長度分類的美甲靈感，還有配色、流行趨勢和簡單的護甲指南。</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">nail-view.com · 支援語言: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文</p>
 </li>
-<li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md">
-  <h2 class="text-xl font-semibold"><a data-local-link href="onthitotnghiep/index.html" class="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:text-emerald-950 focus-visible:outline-2 focus-visible:outline-emerald-600">Ôn Thi Tốt Nghiệp <span aria-hidden="true">→</span></a></h2>
-  <p class="mt-3">ហាត់ប្រឡងបញ្ចប់វិទ្យាល័យរបស់វៀតណាម (THPT) តាមអនឡាញដោយឥតគិតថ្លៃ៖ វិញ្ញាសាកំណត់ម៉ោងច្រើនមុខវិជ្ជា ដាក់ពិន្ទុ ចម្លើយមានការពន្យល់ និងគន្លឹះត្រៀមប្រឡង។</p>
-  <p class="mt-3 text-sm leading-relaxed text-slate-600">onthitotnghiep.com · ភាសា: Tiếng Việt</p>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="onthitotnghiep/index.html">Ôn Thi Tốt Nghiệp</a></h2>
+  <p class="mt-0 mb-[4px]">免費線上練習越南高中畢業考試（THPT）：多科限時模擬題、評分、附解析的答案和備考技巧。</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">onthitotnghiep.com · 支援語言: Tiếng Việt</p>
+</li>
+</ul>
+</article>
+<article id="fr" lang="fr" hidden>
+<h1>Applications web et jeux de vominhthongss</h1>
+<p>Des sites web et des jeux gratuits que je crée pour apprendre et pour le quotidien.</p>
+<ul class="list-none m-0 p-0">
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="lofi-garden/index.html">Lofi Garden</a></h2>
+  <p class="mt-0 mb-[4px]">Un jeu de jardinage lofi tout doux sur mobile : cultivez des légumes en temps réel, attrapez des chenilles et détendez-vous après le travail.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">Android · iOS · Langues: English · Tiếng Việt · 日本語 · 한국어 · 简体中文 · 繁體中文 · Français · Deutsch · ไทย · ខ្មែរ</p>
+</li>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="karimen-honmen/index.html">Karimen &amp; Honmen</a></h2>
+  <p class="mt-0 mb-[4px]">Entraînement gratuit aux examens théoriques du permis japonais (provisoire, définitif, moto, cyclomoteur) : examens blancs corrigés et expliqués, simulateur de conduite et recherche de centres d’examen.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">karimen-honmen.com · Langues: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文 · Português</p>
+</li>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="ji-miso/index.html">Ji Miso</a></h2>
+  <p class="mt-0 mb-[4px]">Apprendre le japonais en jouant et en lisant : dictionnaire avec kanji, traducteur, carnet de vocabulaire, entraînement JLPT N5–N1, histoires courtes et vidéos.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">ji-miso.com · Langues: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
+</li>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="nail-view/index.html">Nail View</a></h2>
+  <p class="mt-0 mb-[4px]">Des idées de nail art classées par style, couleur, forme et longueur, avec palettes de couleurs, tendances et conseils de soin.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">nail-view.com · Langues: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文</p>
+</li>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="onthitotnghiep/index.html">Ôn Thi Tốt Nghiệp</a></h2>
+  <p class="mt-0 mb-[4px]">Entraînement gratuit en ligne au baccalauréat vietnamien (THPT) : épreuves chronométrées dans plusieurs matières, notation, corrigés expliqués et conseils de révision.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">onthitotnghiep.com · Langues: Tiếng Việt</p>
+</li>
+</ul>
+</article>
+<article id="de" lang="de" hidden>
+<h1>Web-Apps und Spiele von vominhthongss</h1>
+<p>Kostenlose Websites und Spiele, die ich zum Lernen und für den Alltag baue.</p>
+<ul class="list-none m-0 p-0">
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="lofi-garden/index.html">Lofi Garden</a></h2>
+  <p class="mt-0 mb-[4px]">Ein gemütliches Lofi-Gartenspiel fürs Handy: Gemüse in Echtzeit anbauen, Raupen fangen und nach Feierabend entspannen.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">Android · iOS · Sprachen: English · Tiếng Việt · 日本語 · 한국어 · 简体中文 · 繁體中文 · Français · Deutsch · ไทย · ខ្មែរ</p>
+</li>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="karimen-honmen/index.html">Karimen &amp; Honmen</a></h2>
+  <p class="mt-0 mb-[4px]">Kostenloses Üben für die japanische Führerschein-Theorieprüfung (vorläufig, endgültig, Motorrad, Moped): Probeprüfungen mit sofortiger Auswertung und Erklärungen, Fahrsimulator und Prüfstellensuche.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">karimen-honmen.com · Sprachen: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文 · Português</p>
+</li>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="ji-miso/index.html">Ji Miso</a></h2>
+  <p class="mt-0 mb-[4px]">Japanisch lernen mit Spielen und Lesestoff: Wörterbuch mit Kanji, Übersetzer, Vokabelheft, JLPT-Übungen N5–N1, Kurzgeschichten und Videos.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">ji-miso.com · Sprachen: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
+</li>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="nail-view/index.html">Nail View</a></h2>
+  <p class="mt-0 mb-[4px]">Nageldesign-Ideen nach Stil, Farbe, Form und Länge, dazu Farbpaletten, Trends und einfache Nagelpflege-Tipps.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">nail-view.com · Sprachen: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文</p>
+</li>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="onthitotnghiep/index.html">Ôn Thi Tốt Nghiệp</a></h2>
+  <p class="mt-0 mb-[4px]">Kostenloses Online-Training für die vietnamesische Abiturprüfung (THPT): zeitgestoppte Tests in vielen Fächern, Bewertung, Lösungen mit Erklärungen und Lerntipps.</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">onthitotnghiep.com · Sprachen: Tiếng Việt</p>
+</li>
+</ul>
+</article>
+<article id="th" lang="th" hidden>
+<h1>เว็บแอปและเกมของ vominhthongss</h1>
+<p>เว็บไซต์และเกมฟรีที่ผมสร้างขึ้นเพื่อการเรียนรู้และชีวิตประจำวัน</p>
+<ul class="list-none m-0 p-0">
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="lofi-garden/index.html">Lofi Garden</a></h2>
+  <p class="mt-0 mb-[4px]">เกมปลูกผัก lofi สุดชิลบนมือถือ ปลูกผักตามเวลาจริง จับหนอน และพักผ่อนหลังเลิกงาน</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">Android · iOS · ภาษา: English · Tiếng Việt · 日本語 · 한국어 · 简体中文 · 繁體中文 · Français · Deutsch · ไทย · ខ្មែរ</p>
+</li>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="karimen-honmen/index.html">Karimen &amp; Honmen</a></h2>
+  <p class="mt-0 mb-[4px]">ฝึกสอบทฤษฎีใบขับขี่ญี่ปุ่นฟรี (ชั่วคราว ตัวจริง มอเตอร์ไซค์ จักรยานยนต์เล็ก) ข้อสอบจำลองตรวจคะแนนทันทีพร้อมคำอธิบาย เครื่องจำลองการขับ และค้นหาศูนย์สอบ</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">karimen-honmen.com · ภาษา: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文 · Português</p>
+</li>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="ji-miso/index.html">Ji Miso</a></h2>
+  <p class="mt-0 mb-[4px]">เรียนภาษาญี่ปุ่นผ่านเกมและการอ่าน พจนานุกรมพร้อมคันจิ เครื่องแปล สมุดคำศัพท์ ฝึก JLPT N5–N1 เรื่องสั้น และวิดีโอ</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">ji-miso.com · ภาษา: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
+</li>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="nail-view/index.html">Nail View</a></h2>
+  <p class="mt-0 mb-[4px]">ไอเดียลายเล็บแยกตามสไตล์ สี ทรง และความยาว พร้อมพาเลตสี เทรนด์ และวิธีดูแลเล็บง่าย ๆ</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">nail-view.com · ภาษา: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文</p>
+</li>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="onthitotnghiep/index.html">Ôn Thi Tốt Nghiệp</a></h2>
+  <p class="mt-0 mb-[4px]">ฝึกทำข้อสอบจบมัธยมปลายของเวียดนาม (THPT) ออนไลน์ฟรี ข้อสอบจับเวลาหลายวิชา ตรวจคะแนน เฉลยพร้อมคำอธิบาย และเคล็ดลับการสอบ</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">onthitotnghiep.com · ภาษา: Tiếng Việt</p>
+</li>
+</ul>
+</article>
+<article id="km" lang="km" hidden>
+<h1>កម្មវិធីគេហទំព័រ និងហ្គេមរបស់ vominhthongss</h1>
+<p>គេហទំព័រ និងហ្គេមឥតគិតថ្លៃដែលខ្ញុំបង្កើតសម្រាប់ការសិក្សា និងជីវិតប្រចាំថ្ងៃ។</p>
+<ul class="list-none m-0 p-0">
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="lofi-garden/index.html">Lofi Garden</a></h2>
+  <p class="mt-0 mb-[4px]">ហ្គេមដាំដំណាំ lofi បែបសម្រាកលំហែលើទូរស័ព្ទ៖ ដាំបន្លែតាមពេលវេលាពិត ចាប់ដង្កូវ និងសម្រាកក្រោយម៉ោងធ្វើការ។</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">Android · iOS · ភាសា: English · Tiếng Việt · 日本語 · 한국어 · 简体中文 · 繁體中文 · Français · Deutsch · ไทย · ខ្មែរ</p>
+</li>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="karimen-honmen/index.html">Karimen &amp; Honmen</a></h2>
+  <p class="mt-0 mb-[4px]">ហាត់ប្រឡងទ្រឹស្តីប័ណ្ណបើកបរនៅជប៉ុនដោយឥតគិតថ្លៃ (បណ្តោះអាសន្ន ពេញ ម៉ូតូ ម៉ូតូតូច)៖ វិញ្ញាសាគំរូដាក់ពិន្ទុភ្លាមៗ មានការពន្យល់ ឧបករណ៍ក្លែងការបើកបរ និងការស្វែងរកមណ្ឌលប្រឡង។</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">karimen-honmen.com · ភាសា: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文 · Português</p>
+</li>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="ji-miso/index.html">Ji Miso</a></h2>
+  <p class="mt-0 mb-[4px]">រៀនភាសាជប៉ុនតាមរយៈហ្គេម និងការអាន៖ វចនានុក្រមមានកាន់ជិ ឧបករណ៍បកប្រែ សៀវភៅពាក្យ ហាត់ JLPT N5–N1 រឿងខ្លី និងវីដេអូ។</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">ji-miso.com · ភាសា: English · Tiếng Việt · 简体中文 · 繁體中文 · Español · Português</p>
+</li>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="nail-view/index.html">Nail View</a></h2>
+  <p class="mt-0 mb-[4px]">គំនិតរចនាក្រចកតាមរចនាប័ទ្ម ពណ៌ រាង និងប្រវែង រួមទាំងក្ដារពណ៌ និន្នាការ និងការណែនាំថែទាំក្រចកងាយៗ។</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">nail-view.com · ភាសា: English · 日本語 · Tiếng Việt · 简体中文 · 繁體中文</p>
+</li>
+<li class="[border-top:1px_solid_#ddd] py-[12px]">
+  <h2 class="text-[1.2em] mt-0 mb-[4px]"><a data-local-link href="onthitotnghiep/index.html">Ôn Thi Tốt Nghiệp</a></h2>
+  <p class="mt-0 mb-[4px]">ហាត់ប្រឡងបញ្ចប់វិទ្យាល័យរបស់វៀតណាម (THPT) តាមអនឡាញដោយឥតគិតថ្លៃ៖ វិញ្ញាសាកំណត់ម៉ោងច្រើនមុខវិជ្ជា ដាក់ពិន្ទុ ចម្លើយមានការពន្យល់ និងគន្លឹះត្រៀមប្រឡង។</p>
+  <p class="text-[14px] text-[#555] mt-0 mb-[4px]">onthitotnghiep.com · ភាសា: Tiếng Việt</p>
 </li>
 </ul>
 </article>
 </main>
-<footer class="mt-8 border-t border-slate-200 pt-4 text-sm text-slate-500">© vominhthongss</footer>
+<footer class="text-[14px] text-[#555] [border-top:1px_solid_#ddd] mt-[16px] pt-[12px]">© vominhthongss</footer>
 </body>
 </html>
