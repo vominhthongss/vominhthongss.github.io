@@ -1,0 +1,8 @@
+@import "tailwindcss" source(none);
+@source "../index.html";
+@source "../karimen-honmen/index.html";
+@source "../ji-miso/index.html";
+@source "../nail-view/index.html";
+@source "../onthitotnghiep/index.html";
+@source "../lofi-garden/index.html";
+@source "../lofi-garden/policy.html";
