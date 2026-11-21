@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MomWell</title>
+<link rel="icon" href="https://raw.githubusercontent.com/vominhthongss/mama-rounded/main/assets/logo.png">
+<meta name="description" content="MomWell — pregnancy, postpartum, appointments, private health notes and family memories.">
+<style>
+  body { margin: 0 auto; max-width: 760px; padding: 16px 20px 40px; background: #fff; color: #000; line-height: 1.6; }
+  nav.langs { margin: 8px 0 16px; }
+  nav.langs button { margin: 0 4px 6px 0; }
+  nav.langs button[aria-pressed="true"] { font-weight: bold; }
+  .brand, .tagline, .soon, footer { color: #555; }
+  .brand, footer { font-size: 14px; }
+  /* 2 huy hiệu cao bằng nhau 48px, giữ đúng tỉ lệ (không méo).
+     Viền trong suốt có sẵn trong file hình được cắt tự động (xem hàm trim bên dưới), nên kích thước nhìn thấy đều nhau. */
+  .stores a { display: inline-block; margin: 0 16px 8px 0; vertical-align: middle; }
+  .stores a.has-badge img { height: 48px; width: auto; display: block; }
+  footer { border-top: 1px solid #ddd; margin-top: 32px; padding-top: 12px; }
+  .icon { width: 72px; height: 72px; border-radius: 6px; display: block; margin: 8px 0 4px; }
+  .shots { display: flex; gap: 8px; overflow-x: auto; padding: 4px 0 12px; }
+  .shots img { width: 180px; height: 320px; flex: none; border: 1px solid #ddd; }
+  .js article { display: none; }
+  .js article.active { display: block; }
+</style>
+</head>
+<body>
+<img class="icon" src="https://raw.githubusercontent.com/vominhthongss/mama-rounded/main/assets/logo.png" alt="MomWell icon">
+<div class="brand">vominhthongss · MomWell</div>
+<nav class="langs" aria-label="Language">
+  <button data-lang="en">English</button>
+  <button data-lang="vi">Tiếng Việt</button>
+  <button data-lang="ja">日本語</button>
+  <button data-lang="ko">한국어</button>
+  <button data-lang="zh_CN">简体中文</button>
+  <button data-lang="zh_TW">繁體中文</button>
+</nav>
+<main>
+
+<article id="en" lang="en">
+<h1>MomWell</h1>
+<p class="tagline">A gentle companion from pregnancy planning to life after birth</p>
+<p>MomWell helps you plan appointments, follow your journey and keep family memories in one place.</p>
+<ul>
+  <li>Track your stage, pregnancy weeks, due date and personal checklist.</li>
+  <li>Manage appointments, calendar events and reminders on your phone.</li>
+  <li>Record mood, weight and temperature, and review your history.</li>
+  <li>Privately save prenatal visit notes, attached documents and family photos.</li>
+  <li>Read guides, articles and meal ideas across six languages.</li>
+</ul>
+<p>Personal records require sign-in. Health information is educational and does not replace medical advice.</p>
+<h2>Download</h2>
+<p class="stores"><a class="gp" href="#">Get it on Google Play</a> <a class="as" href="#">Download on the App Store</a></p>
+<p class="soon">Coming soon on Google Play and the App Store.</p>
+<footer><a href="policy.html#en">Privacy Policy</a> · © vominhthongss</footer>
+</article>
+
+<article id="vi" lang="vi">
+<h1>MomWell</h1>
+<p class="tagline">Đồng hành nhẹ nhàng từ lúc chuẩn bị mang thai đến sau sinh</p>
+<p>MomWell giúp bạn sắp xếp lịch trình, theo dõi sức khỏe và lưu giữ kỷ niệm gia đình.</p>
+<ul>
+  <li>Theo dõi giai đoạn, tuần thai, ngày dự sinh và danh sách việc cần làm.</li>
+  <li>Tạo lịch hẹn, lịch khám và nhắc nhở trên điện thoại.</li>
+  <li>Ghi lại tâm trạng, cân nặng, nhiệt độ và xem lịch sử.</li>
+  <li>Lưu riêng tư ghi chú khám thai, tài liệu và hình ảnh kỷ niệm.</li>
+  <li>Đọc hướng dẫn, bài viết và gợi ý dinh dưỡng bằng sáu ngôn ngữ.</li>
+</ul>
+<p>Dữ liệu cá nhân cần đăng nhập. Thông tin sức khỏe chỉ để tham khảo, không thay thế tư vấn y tế.</p>
+<h2>Tải ứng dụng</h2>
+<p class="stores"><a class="gp" href="#">Tải trên Google Play</a> <a class="as" href="#">Tải trên App Store</a></p>
+<p class="soon">Sắp ra mắt trên Google Play và App Store.</p>
+<footer><a href="policy.html#vi">Chính sách bảo mật</a> · © vominhthongss</footer>
+</article>
+
+<article id="ja" lang="ja">
+<h1>MomWell</h1>
+<p class="tagline">妊娠準備から産後まで、やさしく寄り添うアプリ</p>
+<p>MomWell は予定や健康記録、大切な家族の思い出をまとめて管理できます。</p>
+<ul>
+  <li>ライフステージ、妊娠週数、出産予定日、チェックリストを管理。</li>
+  <li>健診・予定をカレンダーに登録し、端末で通知を設定。</li>
+  <li>気分、体重、体温を記録し、履歴を確認。</li>
+  <li>妊婦健診のメモ、添付書類、家族写真を非公開で保存。</li>
+  <li>6言語で各時期のガイド、記事、食事のヒントを閲覧。</li>
+</ul>
+<p>個人記録にはログインが必要です。健康情報は参考用であり、医療専門家の助言に代わるものではありません。</p>
+<h2>ダウンロード</h2>
+<p class="stores"><a class="gp" href="#">Google Play で入手</a> <a class="as" href="#">App Store でダウンロード</a></p>
+<p class="soon">Google Play と App Store で近日公開予定。</p>
+<footer><a href="policy.html#ja">プライバシーポリシー</a> · © vominhthongss</footer>
+</article>
+
+<article id="ko" lang="ko">
+<h1>MomWell</h1>
+<p class="tagline">임신 준비부터 출산 후까지 함께하는 동반자</p>
+<p>MomWell에서 일정, 건강 기록과 소중한 가족의 추억을 한곳에 모아 보세요.</p>
+<ul>
+  <li>현재 단계, 임신 주수, 출산 예정일과 체크리스트 관리.</li>
+  <li>산전 진료와 일정을 달력에 기록하고 알림 설정.</li>
+  <li>기분, 체중, 체온을 기록하고 내역 확인.</li>
+  <li>산전 진료 메모, 첨부 파일과 가족 사진을 비공개로 보관.</li>
+  <li>6개 언어로 안내 글과 식단 아이디어 확인.</li>
+</ul>
+<p>개인 기록을 관리하려면 로그인이 필요합니다. 건강 정보는 의료 전문가의 진단이나 조언을 대신하지 않습니다.</p>
+<h2>다운로드</h2>
+<p class="stores"><a class="gp" href="#">Google Play에서 다운로드</a> <a class="as" href="#">App Store에서 다운로드</a></p>
+<p class="soon">Google Play와 App Store 출시 예정.</p>
+<footer><a href="policy.html#ko">개인정보 처리방침</a> · © vominhthongss</footer>
+</article>
+
+<article id="zh_CN" lang="zh-Hans">
+<h1>MomWell</h1>
+<p class="tagline">从备孕到产后，温柔陪伴每一步</p>
+<p>MomWell 帮助您集中管理日程、健康记录和珍贵的家庭回忆。</p>
+<ul>
+  <li>跟踪阶段、孕周、预产期和待办清单。</li>
+  <li>在日历中管理产检和日常日程，并设置提醒。</li>
+  <li>记录心情、体重、体温及历史数据。</li>
+  <li>私密保存产检备注、附件和家庭照片。</li>
+  <li>以六种语言阅读阶段指南、文章和饮食建议。</li>
+</ul>
+<p>管理个人记录需要登录。健康内容仅供参考，不能替代专业医疗建议。</p>
+<h2>下载应用</h2>
+<p class="stores"><a class="gp" href="#">在 Google Play 获取</a> <a class="as" href="#">在 App Store 下载</a></p>
+<p class="soon">即将登陆 Google Play 和 App Store。</p>
+<footer><a href="policy.html#zh_CN">隐私政策</a> · © vominhthongss</footer>
+</article>
+
+<article id="zh_TW" lang="zh-Hant">
+<h1>MomWell</h1>
+<p class="tagline">從備孕到產後，溫柔陪伴每一步</p>
+<p>MomWell 協助您集中管理行程、健康紀錄與珍貴的家庭回憶。</p>
+<ul>
+  <li>追蹤階段、孕週、預產期與待辦清單。</li>
+  <li>在行事曆管理產檢和日常行程，並設定提醒。</li>
+  <li>記錄心情、體重、體溫及歷史資料。</li>
+  <li>私密儲存產檢備註、附件與家庭照片。</li>
+  <li>以六種語言閱讀階段指南、文章和飲食建議。</li>
+</ul>
+<p>管理個人紀錄需要登入。健康內容僅供參考，不能取代專業醫療建議。</p>
+<h2>下載應用程式</h2>
+<p class="stores"><a class="gp" href="#">在 Google Play 取得</a> <a class="as" href="#">在 App Store 下載</a></p>
+<p class="soon">即將於 Google Play 和 App Store 上架。</p>
+<footer><a href="policy.html#zh_TW">隱私權政策</a> · © vominhthongss</footer>
+</article>
+</main>
+
+<script>
+  // ==== Chỉ sửa ở đây ====
+  // Chưa có link store chính thức: để trống để ẩn nút.
+  const GOOGLE_PLAY_URL = "";
+  // Link App Store: để trống "" khi chưa có (nút sẽ ẩn). Có rồi thì dán vào, vd "https://apps.apple.com/app/id1234567890".
+  const APP_STORE_URL = "";
+  // true khi app đã lên store: ẩn dòng "Sắp ra mắt".
+  const RELEASED = false;
+  // Xài đúng huy hiệu của site hiện tại, không sửa style.
+  // Chưa có file thì nút tự hiện chữ thay cho hình.
+  const GOOGLE_PLAY_BADGE = "../lofi-garden/badge-google-play.png";
+  const APP_STORE_BADGE = "../lofi-garden/badge-app-store.svg";
+
+  (function () {
+    document.documentElement.classList.add("js");
+    // Cắt phần viền trong suốt quanh huy hiệu (file của Google có viền rộng hơn của Apple).
+    // Trình duyệt chặn đọc điểm ảnh khi mở file trực tiếp (file://), lúc đó giữ nguyên hình.
+    function trim(src, done) {
+      const im = new Image();
+      im.onload = () => {
+        try {
+          const w = im.naturalWidth || 600, h = im.naturalHeight || 200;
+          const c = document.createElement("canvas"); c.width = w; c.height = h;
+          const g = c.getContext("2d"); g.drawImage(im, 0, 0, w, h);
+          const px = g.getImageData(0, 0, w, h).data;
+          let x0 = w, y0 = h, x1 = -1, y1 = -1;
+          for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
+            if (px[(y * w + x) * 4 + 3] > 8) { if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y; }
+          }
+          if (x1 < 0) return done(src);
+          const o = document.createElement("canvas"); o.width = x1 - x0 + 1; o.height = y1 - y0 + 1;
+          o.getContext("2d").drawImage(c, x0, y0, o.width, o.height, 0, 0, o.width, o.height);
+          done(o.toDataURL("image/png"));
+        } catch (e) { done(src); }
+      };
+      im.onerror = () => done(null);
+      im.src = src;
+    }
+    function badge(a, url, img) {
+      a.href = url; a.hidden = !url;
+      if (!img) return;
+      const label = a.textContent;
+      trim(img, (src) => {
+        if (!src) return;  // chưa có file hình: giữ chữ
+        const el = document.createElement("img");
+        el.alt = label; el.src = src;
+        a.classList.add("has-badge");
+        a.replaceChildren(el);
+      });
+    }
+    for (const a of document.querySelectorAll("a.gp")) badge(a, GOOGLE_PLAY_URL, GOOGLE_PLAY_BADGE);
+    for (const a of document.querySelectorAll("a.as")) badge(a, APP_STORE_URL, APP_STORE_BADGE);
+    for (const p of document.querySelectorAll(".soon")) p.hidden = RELEASED;
+
+    const LANGS = ["en", "vi", "ja", "ko", "zh_CN", "zh_TW"];
+    const HTML_LANG = { zh_CN: "zh-Hans", zh_TW: "zh-Hant" };
+    function normalize(code) {
+      if (!code) return "";
+      const c = code.replace("-", "_");
+      if (LANGS.includes(c)) return c;
+      const low = code.toLowerCase();
+      if (low.startsWith("zh")) return /hant|tw|hk|mo/.test(low) ? "zh_TW" : "zh_CN";
+      const base = low.split(/[-_]/)[0];
+      return LANGS.includes(base) ? base : "";
+    }
+    function show(id, push) {
+      for (const a of document.querySelectorAll("main article")) a.classList.toggle("active", a.id === id);
+      for (const b of document.querySelectorAll("nav.langs button")) b.setAttribute("aria-pressed", String(b.dataset.lang === id));
+      document.documentElement.lang = HTML_LANG[id] || id;
+      if (push) history.replaceState(null, "", "#" + id);
+    }
+    for (const b of document.querySelectorAll("nav.langs button")) {
+      b.addEventListener("click", () => { show(b.dataset.lang, true); window.scrollTo(0, 0); });
+    }
+    window.addEventListener("hashchange", () => { const n = normalize(location.hash.slice(1)); if (n) show(n, false); });
+    // Mặc định luôn mở tiếng Anh; chỉ đổi khi link có ?lang=xx hoặc #xx
+    const q = new URLSearchParams(location.search).get("lang") || location.hash.slice(1);
+    show(normalize(q) || "en", false);
+  })();
+</script>
+</body>
+</html>
