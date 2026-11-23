@@ -75,7 +75,7 @@
       card.className = "card border p-2 h-100 rounded-0 d-flex flex-column" + (record.selected ? " border-dark bg-body-tertiary" : " border-secondary-subtle");
       card.dataset.pdfPageCard = "true";
       const preview = document.createElement("div");
-      preview.className = "bg-body-secondary border d-flex align-items-center justify-content-center p-2";
+      preview.className = "bg-body-secondary d-flex align-items-center justify-content-center p-2";
       const canvas = document.createElement("canvas");
       canvas.className = "img-fluid d-block mx-auto";
       canvas.dataset.pageId = String(record.id);
