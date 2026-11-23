@@ -6,21 +6,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Lofi Garden</title>
 <meta name="description" content="Privacy Policy for the mobile game Lofi Garden by vominhthongss.">
-<style>
-  body { margin: 0 auto; max-width: 760px; padding: 16px 20px 40px; background: #fff; color: #000;
-    line-height: 1.6; }
-  nav.langs { margin: 8px 0 16px; }
-  nav.langs button { margin: 0 4px 6px 0; }
-  nav.langs button[aria-pressed="true"] { font-weight: bold; }
-  .date, .note, .brand { color: #555; font-size: 14px; }
-  .js article { display: none; }
-  .js article.active { display: block; }
-</style>
+<link rel="stylesheet" href="../tools/assets/styles.css">
+<link rel="stylesheet" href="../tools/assets/site-layout.css">
 </head>
 <body>
-<header>
-  <div class="brand">vominhthongss · Lofi Garden</div>
-  <nav class="langs" aria-label="Language">
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="../">vominhthongss · Lofi Garden</a>
+    <div class="header-actions">
+      <a href="../" data-site-link="home" data-site-href="../">Home</a>
+      <a href="../tools/" data-site-link="tools" data-site-href="../tools/">Tools</a>
+      <label for="site-language">Language</label>
+      <select id="site-language" class="site-language-select" aria-label="Language"><option value="en">English</option><option value="vi">Tiếng Việt</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="zh_CN">简体中文</option><option value="zh_TW">繁體中文</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="th">ไทย</option><option value="km">ខ្មែរ</option></select>
+    </div>
+  </div>
+  <nav class="langs site-legacy-languages" aria-label="Language">
     <button data-lang="en">English</button>
     <button data-lang="vi">Tiếng Việt</button>
     <button data-lang="ja">日本語</button>
@@ -33,10 +33,10 @@
     <button data-lang="km">ខ្មែរ</button>
   </nav>
 </header>
-<main>
+<main class="container site-content">
  
 <!-- ============================== ENGLISH ============================== -->
-<article id="en" lang="en">
+<article class="site-page" id="en" lang="en">
 <h1>Privacy Policy — Lofi Garden</h1>
 <p class="date">Effective date: November 18, 2026</p>
 <p>This Privacy Policy explains how vominhthongss (“we”, “us”) handles information when you use the mobile game Lofi Garden (the “App”) on Android and iOS. We built the App to collect as little as possible: we do not run our own servers, we do not ask you to create an account, and we do not collect your name, email address, contacts, photos or precise location.</p>
@@ -101,7 +101,7 @@
 </article>
  
 <!-- ============================== TIẾNG VIỆT ============================== -->
-<article id="vi" lang="vi">
+<article class="site-page" id="vi" lang="vi">
 <h1>Chính sách bảo mật — Lofi Garden</h1>
 <p class="date">Ngày hiệu lực: 18/11/2026</p>
 <p>Chính sách này giải thích cách vominhthongss (“chúng tôi”) xử lý thông tin khi bạn sử dụng trò chơi di động Lofi Garden (“Ứng dụng”) trên Android và iOS. Chúng tôi thiết kế Ứng dụng để thu thập ít nhất có thể: chúng tôi không có máy chủ riêng, không yêu cầu tạo tài khoản, và không thu thập tên, email, danh bạ, hình ảnh hay vị trí chính xác của bạn.</p>
@@ -166,7 +166,7 @@
 </article>
  
 <!-- ============================== 日本語 ============================== -->
-<article id="ja" lang="ja">
+<article class="site-page" id="ja" lang="ja">
 <h1>プライバシーポリシー — Lofi Garden</h1>
 <p class="date">施行日：2026年11月18日</p>
 <p>本プライバシーポリシーは、vominhthongss（以下「当方」）が、Android および iOS 向けモバイルゲーム「Lofi Garden」（以下「本アプリ」）のご利用時に情報をどのように取り扱うかを説明するものです。本アプリは収集する情報を最小限にするよう設計されています。当方は独自のサーバーを運用しておらず、アカウント登録も求めず、お名前、メールアドレス、連絡先、写真、正確な位置情報を収集しません。</p>
@@ -231,7 +231,7 @@
 </article>
  
 <!-- ============================== 한국어 ============================== -->
-<article id="ko" lang="ko">
+<article class="site-page" id="ko" lang="ko">
 <h1>개인정보 처리방침 — Lofi Garden</h1>
 <p class="date">시행일: 2026년 11월 18일</p>
 <p>본 개인정보 처리방침은 vominhthongss(이하 “당사”)가 Android 및 iOS용 모바일 게임 Lofi Garden(이하 “앱”)을 이용할 때 정보를 어떻게 처리하는지 설명합니다. 당사는 정보를 최소한으로 수집하도록 앱을 설계했습니다. 당사는 자체 서버를 운영하지 않고, 계정 생성을 요구하지 않으며, 이름, 이메일 주소, 연락처, 사진 또는 정확한 위치를 수집하지 않습니다.</p>
@@ -296,7 +296,7 @@
 </article>
  
 <!-- ============================== 简体中文 ============================== -->
-<article id="zh_CN" lang="zh-Hans">
+<article class="site-page" id="zh_CN" lang="zh-Hans">
 <h1>隐私政策 — Lofi Garden</h1>
 <p class="date">生效日期：2026年11月18日</p>
 <p>本隐私政策说明 vominhthongss（“我们”）在您使用 Android 和 iOS 手机游戏 Lofi Garden（“本应用”）时如何处理信息。我们在设计本应用时尽量少收集信息：我们不运营自己的服务器，不要求您创建账号，也不收集您的姓名、电子邮件地址、通讯录、照片或精确位置。</p>
@@ -361,7 +361,7 @@
 </article>
  
 <!-- ============================== 繁體中文 ============================== -->
-<article id="zh_TW" lang="zh-Hant">
+<article class="site-page" id="zh_TW" lang="zh-Hant">
 <h1>隱私權政策 — Lofi Garden</h1>
 <p class="date">生效日期：2026年11月18日</p>
 <p>本隱私權政策說明 vominhthongss（「我們」）在您使用 Android 和 iOS 手機遊戲 Lofi Garden（「本應用程式」）時如何處理資訊。我們在設計本應用程式時盡量少收集資訊：我們不經營自己的伺服器，不要求您建立帳號，也不收集您的姓名、電子郵件地址、聯絡人、相片或精確位置。</p>
@@ -426,7 +426,7 @@
 </article>
  
 <!-- ============================== FRANÇAIS ============================== -->
-<article id="fr" lang="fr">
+<article class="site-page" id="fr" lang="fr">
 <h1>Politique de confidentialité — Lofi Garden</h1>
 <p class="date">Date d’entrée en vigueur : 18 novembre 2026</p>
 <p>La présente politique explique comment vominhthongss (« nous ») traite les informations lorsque vous utilisez le jeu mobile Lofi Garden (l’« Application ») sur Android et iOS. Nous avons conçu l’Application pour collecter le moins de données possible : nous n’exploitons aucun serveur, nous ne vous demandons pas de créer de compte et nous ne collectons ni votre nom, ni votre adresse e-mail, ni vos contacts, ni vos photos, ni votre position précise.</p>
@@ -491,7 +491,7 @@
 </article>
  
 <!-- ============================== DEUTSCH ============================== -->
-<article id="de" lang="de">
+<article class="site-page" id="de" lang="de">
 <h1>Datenschutzerklärung — Lofi Garden</h1>
 <p class="date">Gültig ab: 18. November 2026</p>
 <p>Diese Datenschutzerklärung erläutert, wie vominhthongss („wir“) mit Informationen umgeht, wenn du das Handyspiel Lofi Garden (die „App“) unter Android und iOS nutzt. Wir haben die App so gestaltet, dass sie so wenig wie möglich erfasst: Wir betreiben keine eigenen Server, verlangen kein Benutzerkonto und erheben weder deinen Namen, deine E-Mail-Adresse, Kontakte, Fotos noch deinen genauen Standort.</p>
@@ -556,7 +556,7 @@
 </article>
  
 <!-- ============================== ไทย ============================== -->
-<article id="th" lang="th">
+<article class="site-page" id="th" lang="th">
 <h1>นโยบายความเป็นส่วนตัว — Lofi Garden</h1>
 <p class="date">วันที่มีผลบังคับใช้: 18 พฤศจิกายน 2026</p>
 <p>นโยบายความเป็นส่วนตัวนี้อธิบายวิธีที่ vominhthongss (“เรา”) จัดการข้อมูลเมื่อคุณใช้เกมมือถือ Lofi Garden (“แอป”) บน Android และ iOS เราออกแบบแอปให้เก็บข้อมูลน้อยที่สุดเท่าที่จะทำได้ เราไม่มีเซิร์ฟเวอร์ของตนเอง ไม่ขอให้คุณสร้างบัญชี และไม่เก็บชื่อ อีเมล รายชื่อติดต่อ รูปภาพ หรือตำแหน่งที่แม่นยำของคุณ</p>
@@ -621,7 +621,7 @@
 </article>
  
 <!-- ============================== ខ្មែរ ============================== -->
-<article id="km" lang="km">
+<article class="site-page" id="km" lang="km">
 <h1>គោលការណ៍ឯកជនភាព — Lofi Garden</h1>
 <p class="date">កាលបរិច្ឆេទចូលជាធរមាន៖ ថ្ងៃទី ១៨ ខែវិច្ឆិកា ឆ្នាំ ២០២៦</p>
 <p>គោលការណ៍ឯកជនភាពនេះពន្យល់ពីរបៀបដែល vominhthongss (“យើង”) គ្រប់គ្រងព័ត៌មាន នៅពេលអ្នកប្រើហ្គេមទូរស័ព្ទ Lofi Garden (“កម្មវិធី”) នៅលើ Android និង iOS។ យើងបានរចនាកម្មវិធីឱ្យប្រមូលព័ត៌មានតិចបំផុតតាមដែលអាចធ្វើទៅបាន៖ យើងមិនដំណើរការម៉ាស៊ីនមេផ្ទាល់ខ្លួន មិនតម្រូវឱ្យអ្នកបង្កើតគណនី ហើយមិនប្រមូលឈ្មោះ អាសយដ្ឋានអ៊ីមែល បញ្ជីទំនាក់ទំនង រូបថត ឬទីតាំងច្បាស់លាស់របស់អ្នកឡើយ។</p>
@@ -734,6 +734,7 @@
     show(pick(), false);
   })();
 </script>
+<script src="../tools/assets/site-shell.js"></script>
 </body>
 </html>
  
