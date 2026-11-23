@@ -5,27 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>vominhthongss — Web apps &amp; games</title>
 <meta name="description" content="Free web apps and games by vominhthongss: Lofi Garden, MomWell, Karimen &amp; Honmen, Ji Miso, Nail View, Ôn Thi Tốt Nghiệp.">
-<style>
-  body { margin: 0 auto; max-width: 760px; padding: 16px 20px 40px; background: #fff; color: #000; line-height: 1.6; }
-  nav.langs { margin: 8px 0 16px; }
-  nav.langs button { margin: 0 4px 6px 0; }
-  nav.langs button[aria-pressed="true"] { font-weight: bold; }
-  .brand, .meta, footer { color: #555; font-size: 14px; }
-  ul.apps { list-style: none; padding: 0; margin: 0; }
-  ul.apps li { border-top: 1px solid #ddd; padding: 12px 0; }
-  ul.apps h2 { font-size: 1.2em; margin: 0 0 4px; }
-  ul.apps p { margin: 0 0 4px; }
-  .tool-collection { border-top: 2px solid #333; margin-top: 28px; padding-top: 14px; }
-  .tool-collection h2 { margin: 0 0 4px; }
-  .tool-collection h3 { margin: 0 0 4px; font-size: 1.1em; }
-  footer { border-top: 1px solid #ddd; margin-top: 16px; padding-top: 12px; }
-  .js article { display: none; }
-  .js article.active { display: block; }
-</style>
+<link rel="stylesheet" href="tools/assets/styles.css">
+<link rel="stylesheet" href="tools/assets/site-layout.css">
 </head>
 <body>
-<div class="brand">vominhthongss</div>
-<nav class="langs" aria-label="Language">
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="./">vominhthongss</a>
+    <div class="header-actions">
+      <a href="./" data-site-link="home" data-site-href="./" aria-current="page">Home</a>
+      <a href="./tools/" data-site-link="tools" data-site-href="./tools/">Tools</a>
+      <label for="site-language">Language</label>
+      <select id="site-language" class="site-language-select" aria-label="Language"><option value="en">English</option><option value="vi">Tiếng Việt</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="zh_CN">简体中文</option><option value="zh_TW">繁體中文</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="th">ไทย</option><option value="km">ខ្មែរ</option></select>
+    </div>
+  </div>
+  <nav class="langs site-legacy-languages" aria-label="Language">
   <button data-lang="en">English</button>
   <button data-lang="vi">Tiếng Việt</button>
   <button data-lang="ja">日本語</button>
@@ -37,8 +31,9 @@
   <button data-lang="th">ไทย</button>
   <button data-lang="km">ខ្មែរ</button>
 </nav>
-<main>
-<article id="en" lang="en">
+</header>
+<main class="container site-content">
+<article class="site-page" id="en" lang="en">
 <h1>Web apps &amp; games by vominhthongss</h1>
 <p>Free websites and games I build for learning and everyday life.</p>
 <ul class="apps">
@@ -83,7 +78,7 @@
   <p><a href="tools/?lang=en">Browse all tools</a></p>
 </section>
 </article>
-<article id="vi" lang="vi">
+<article class="site-page" id="vi" lang="vi">
 <h1>Các web app và game của vominhthongss</h1>
 <p>Những trang web và trò chơi miễn phí tôi làm để phục vụ việc học và cuộc sống hằng ngày.</p>
 <ul class="apps">
@@ -128,7 +123,7 @@
   <p><a href="tools/?lang=vi">Xem tất cả công cụ</a></p>
 </section>
 </article>
-<article id="ja" lang="ja">
+<article class="site-page" id="ja" lang="ja">
 <h1>vominhthongss のウェブアプリとゲーム</h1>
 <p>学習や日々の暮らしに役立つ、無料のウェブサイトとゲームを作っています。</p>
 <ul class="apps">
@@ -173,7 +168,7 @@
   <p><a href="tools/?lang=ja">すべてのツール</a></p>
 </section>
 </article>
-<article id="ko" lang="ko">
+<article class="site-page" id="ko" lang="ko">
 <h1>vominhthongss의 웹 앱과 게임</h1>
 <p>공부와 일상에 도움이 되는 무료 웹사이트와 게임을 만들고 있어요.</p>
 <ul class="apps">
@@ -218,7 +213,7 @@
   <p><a href="tools/?lang=ko">모든 도구 보기</a></p>
 </section>
 </article>
-<article id="zh_CN" lang="zh-Hans">
+<article class="site-page" id="zh_CN" lang="zh-Hans">
 <h1>vominhthongss 的网页应用和游戏</h1>
 <p>我制作的免费网站和游戏，帮助学习和日常生活。</p>
 <ul class="apps">
@@ -263,7 +258,7 @@
   <p><a href="tools/?lang=zh_CN">查看所有工具</a></p>
 </section>
 </article>
-<article id="zh_TW" lang="zh-Hant">
+<article class="site-page" id="zh_TW" lang="zh-Hant">
 <h1>vominhthongss 的網頁應用程式和遊戲</h1>
 <p>我製作的免費網站和遊戲，幫助學習和日常生活。</p>
 <ul class="apps">
@@ -308,7 +303,7 @@
   <p><a href="tools/?lang=zh_TW">查看所有工具</a></p>
 </section>
 </article>
-<article id="fr" lang="fr">
+<article class="site-page" id="fr" lang="fr">
 <h1>Applications web et jeux de vominhthongss</h1>
 <p>Des sites web et des jeux gratuits que je crée pour apprendre et pour le quotidien.</p>
 <ul class="apps">
@@ -353,7 +348,7 @@
   <p><a href="tools/?lang=fr">Voir tous les outils</a></p>
 </section>
 </article>
-<article id="de" lang="de">
+<article class="site-page" id="de" lang="de">
 <h1>Web-Apps und Spiele von vominhthongss</h1>
 <p>Kostenlose Websites und Spiele, die ich zum Lernen und für den Alltag baue.</p>
 <ul class="apps">
@@ -398,7 +393,7 @@
   <p><a href="tools/?lang=de">Alle Tools ansehen</a></p>
 </section>
 </article>
-<article id="th" lang="th">
+<article class="site-page" id="th" lang="th">
 <h1>เว็บแอปและเกมของ vominhthongss</h1>
 <p>เว็บไซต์และเกมฟรีที่ผมสร้างขึ้นเพื่อการเรียนรู้และชีวิตประจำวัน</p>
 <ul class="apps">
@@ -443,7 +438,7 @@
   <p><a href="tools/?lang=th">ดูเครื่องมือทั้งหมด</a></p>
 </section>
 </article>
-<article id="km" lang="km">
+<article class="site-page" id="km" lang="km">
 <h1>កម្មវិធីគេហទំព័រ និងហ្គេមរបស់ vominhthongss</h1>
 <p>គេហទំព័រ និងហ្គេមឥតគិតថ្លៃដែលខ្ញុំបង្កើតសម្រាប់ការសិក្សា និងជីវិតប្រចាំថ្ងៃ។</p>
 <ul class="apps">
@@ -519,5 +514,6 @@
     show(normalize(q) || "en", false);
   })();
 </script>
+<script src="tools/assets/site-shell.js"></script>
 </body>
 </html>
