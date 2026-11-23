@@ -6,21 +6,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — MomWell</title>
 <meta name="description" content="Privacy Policy for MomWell, a pregnancy and postpartum companion on Android and iOS.">
-<style>
-  body { margin: 0 auto; max-width: 760px; padding: 16px 20px 40px; background: #fff; color: #000;
-    line-height: 1.6; }
-  nav.langs { margin: 8px 0 16px; }
-  nav.langs button { margin: 0 4px 6px 0; }
-  nav.langs button[aria-pressed="true"] { font-weight: bold; }
-  .date, .note, .brand { color: #555; font-size: 14px; }
-  .js article { display: none; }
-  .js article.active { display: block; }
-</style>
+<link rel="stylesheet" href="../tools/assets/styles.css">
+<link rel="stylesheet" href="../tools/assets/site-layout.css">
 </head>
 <body>
-<header>
-  <div class="brand">vominhthongss · MomWell</div>
-  <nav class="langs" aria-label="Language">
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="../">vominhthongss · MomWell</a>
+    <div class="header-actions">
+      <a href="../" data-site-link="home" data-site-href="../">Home</a>
+      <a href="../tools/" data-site-link="tools" data-site-href="../tools/">Tools</a>
+      <label for="site-language">Language</label>
+      <select id="site-language" class="site-language-select" aria-label="Language"><option value="en">English</option><option value="vi">Tiếng Việt</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="zh_CN">简体中文</option><option value="zh_TW">繁體中文</option></select>
+    </div>
+  </div>
+  <nav class="langs site-legacy-languages" aria-label="Language">
     <button data-lang="en">English</button>
     <button data-lang="vi">Tiếng Việt</button>
     <button data-lang="ja">日本語</button>
@@ -29,10 +29,10 @@
     <button data-lang="zh_TW">繁體中文</button>
   </nav>
 </header>
-<main>
+<main class="container site-content">
  
 <!-- ============================== ENGLISH ============================== -->
-<article id="en" lang="en">
+<article class="site-page" id="en" lang="en">
 <h1>Privacy Policy — MomWell</h1>
 <p class="date">Effective date: November 21, 2026</p>
 <p>This Privacy Policy explains how vominhthongss (“we”) handles information when you use MomWell on Android or iOS. The App offers optional accounts, private health-related records and Google AdMob advertising.</p>
@@ -68,7 +68,7 @@
 <p class="note">If translations differ, the English text serves as the reference.</p>
 </article>
 
-<article id="vi" lang="vi">
+<article class="site-page" id="vi" lang="vi">
 <h1>Chính sách bảo mật — MomWell</h1>
 <p class="date">Ngày hiệu lực: 21/11/2026</p>
 <p>Chính sách này giải thích cách vominhthongss (“chúng tôi”) xử lý thông tin khi bạn sử dụng MomWell trên Android hoặc iOS. Ứng dụng có tài khoản tùy chọn, dữ liệu riêng tư liên quan đến sức khỏe và quảng cáo Google AdMob.</p>
@@ -104,7 +104,7 @@
 <p class="note">Nếu bản dịch khác bản tiếng Anh, vui lòng tham khảo bản tiếng Anh.</p>
 </article>
 
-<article id="ja" lang="ja">
+<article class="site-page" id="ja" lang="ja">
 <h1>プライバシーポリシー — MomWell</h1>
 <p class="date">施行日：2026年11月21日</p>
 <p>このポリシーは、Android／iOS 向け MomWell において vominhthongss（以下「当方」）が情報をどのように扱うかを説明します。本アプリは任意のアカウント、非公開の健康関連記録、Google AdMob 広告を備えています。</p>
@@ -140,7 +140,7 @@
 <p class="note">翻訳に相違がある場合、英語版を参照してください。</p>
 </article>
 
-<article id="ko" lang="ko">
+<article class="site-page" id="ko" lang="ko">
 <h1>개인정보 처리방침 — MomWell</h1>
 <p class="date">시행일: 2026년 11월 21일</p>
 <p>이 방침은 Android 및 iOS의 MomWell 앱에서 vominhthongss(이하 ‘운영자’)가 정보를 어떻게 처리하는지 설명합니다. 앱은 선택적 계정, 비공개 건강 기록, Google AdMob 광고를 제공합니다.</p>
@@ -176,7 +176,7 @@
 <p class="note">번역 내용이 다를 경우 영어 버전을 참고해 주세요.</p>
 </article>
 
-<article id="zh_CN" lang="zh-Hans">
+<article class="site-page" id="zh_CN" lang="zh-Hans">
 <h1>隐私政策 — MomWell</h1>
 <p class="date">生效日期：2026年11月21日</p>
 <p>本政策说明 vominhthongss（“我们”）如何处理 Android 和 iOS 版 MomWell 中的信息。本应用提供可选账号、私人健康相关记录及 Google AdMob 广告。</p>
@@ -212,7 +212,7 @@
 <p class="note">如译文与英文版本不一致，请以英文内容为参考。</p>
 </article>
 
-<article id="zh_TW" lang="zh-Hant">
+<article class="site-page" id="zh_TW" lang="zh-Hant">
 <h1>隱私權政策 — MomWell</h1>
 <p class="date">生效日期：2026年11月21日</p>
 <p>本政策說明 vominhthongss（「我們」）如何處理 Android 與 iOS 版 MomWell 中的資訊。本應用程式提供選用帳號、私人健康相關紀錄及 Google AdMob 廣告。</p>
@@ -296,6 +296,7 @@
     show(pick(), false);
   })();
 </script>
+<script src="../tools/assets/site-shell.js"></script>
 </body>
 </html>
  
