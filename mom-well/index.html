@@ -192,8 +192,8 @@
         a.replaceChildren(el);
       });
     }
-    for (const a of document.querySelectorAll("a[data-store="google"]")) badge(a, GOOGLE_PLAY_URL, GOOGLE_PLAY_BADGE);
-    for (const a of document.querySelectorAll("a[data-store="apple"]")) badge(a, APP_STORE_URL, APP_STORE_BADGE);
+    for (const a of document.querySelectorAll("a[data-store=google]")) badge(a, GOOGLE_PLAY_URL, GOOGLE_PLAY_BADGE);
+    for (const a of document.querySelectorAll("a[data-store=apple]")) badge(a, APP_STORE_URL, APP_STORE_BADGE);
     for (const p of document.querySelectorAll("[data-coming-soon]")) p.hidden = RELEASED;
 
     const LANGS = ["en", "vi", "ja", "ko", "zh_CN", "zh_TW"];
