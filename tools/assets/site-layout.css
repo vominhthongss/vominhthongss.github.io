@@ -1,17 +1,11 @@
-/* Layout-only rules missing from Bootstrap: localized article visibility and app media. */
-.js main article{display:none}
-.js main article.active{display:block}
+/* Bootstrap CDN handles layout, spacing, colors, and components.
+   Keep only behavior for translated content and fixed-size app imagery. */
+.js main article.site-page{display:none}
+.js main article.site-page.active{display:block}
 .site-legacy-languages{display:none}
-.site-page,.site-page p,.site-page li{overflow-wrap:anywhere}
-.site-page .apps .card h2,.site-page .apps .card h3{font-size:1.2rem;margin:0 0 .6rem}
-.site-page .apps .card p{margin:0 0 .6rem}
-.site-page .apps .meta{font-size:.875rem;color:var(--bs-secondary-color)}
-.site-page .tool-collection .apps{margin-top:.75rem;margin-bottom:.75rem}
-.site-page .tagline{font-size:1.12rem;color:var(--bs-secondary-color)}
-.site-page .date,.site-page .note,.site-page .soon{font-size:.9rem;color:var(--bs-secondary-color)}
+.site-app-media .icon{width:72px;height:72px;object-fit:cover}
+.site-app-media .shots img{width:160px;height:285px;object-fit:contain;flex:0 0 auto}
 .site-page .stores a.has-badge img{height:48px;width:auto;max-width:100%;object-fit:contain}
-.site-page .stores a:not(.has-badge){text-decoration:none}
-.site-app-media .icon{height:80px;width:80px;object-fit:cover;display:block}
-.site-app-media .shots{scroll-snap-type:x proximity}
-.site-app-media .shots img{width:180px;height:320px;object-fit:contain;flex:none;scroll-snap-align:start;background:#fff}
-@media(max-width:575.98px){.site-app-media .shots img{width:150px;height:266px}}
+.site-page .stores a[hidden]{display:none!important}
+.site-page,.site-page a{overflow-wrap:anywhere}
+@media(max-width:575.98px){.site-app-media .shots img{width:132px;height:235px}}
