@@ -36,3 +36,25 @@ Run a static HTTP server in the repository root, such as `python3 -m http.server
 8. Check mobile layout and that network requests do not contain the local PDF bytes.
 
 There is no build step; `index.html`, `tools/index.html` and `tools/merge-pdf/index.html` are served directly by GitHub Pages.
+
+## Shared website design system
+
+The site uses the same visual system as the PDF editor across **all public GitHub Pages HTML routes**:
+
+- Root homepage `/`.
+- Lofi Garden landing page and privacy policy.
+- MomWell landing page, privacy policy, and account-deletion page.
+- Tools directory and PDF editor (already using the base styles).
+
+`/tools/assets/styles.css` is the single base for typography, background, colors, controls, headers, and cards. `site-layout.css` extends that design for localized portfolio, landing, and policy content. The product pages retain their existing translated copy, app screenshots, store badges, policy text, and behavior.
+
+`site-shell.js` connects the shared header language picker to the existing translation controls without rewriting policy/document scripts. Original language buttons remain present (but visually hidden); switching languages still uses the original page selector. Header links preserve the locale through `?lang=`.
+
+### Visual regression checklist
+
+1. Check layout at 375px and 1280px widths: header, language selector, cards, screenshots, and policy text.
+2. Verify locale switches at `/`, `/lofi-garden/`, `/lofi-garden/policy.html`, `/mom-well/`, `/mom-well/policy.html`, and `/mom-well/delete-account.html`.
+3. Verify privacy-policy and account-deletion anchor links still navigate to the corresponding locale.
+4. Confirm app store badge images, screenshot carousels, and PDF editor interactions still work.
+5. Confirm `/tools/` and `/tools/merge-pdf/` retain their original appearance.
+
