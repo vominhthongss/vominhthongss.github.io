@@ -51,7 +51,7 @@ All eight public HTML pages load **Bootstrap 5.3.9 CSS and JS bundle from jsDeli
 
 ### Manual regression checklist
 
-1. Check each page at 375px and 1280px: all buttons, cards, inputs and images have **square corners**.
+1. Check each page at 375px and 1280px: all buttons, cards, inputs and images have **square corners**. Images (including Lofi Garden screenshots, app icons and PDF canvas previews) must have **no border**, while cards, app sections and PDF work areas use Bootstrap `border` and `border-secondary-subtle` utilities.
 2. Verify all supported language selectors and URL `?lang=` and `#lang` links. The homepage and Lofi Garden support 10 locales; MomWell supports 6.
 3. Confirm the app screenshots, icon, store badges and privacy/account-deletion links.
 4. On `/tools/merge-pdf/`, test drag-and-drop, multiple files, page selection, rearranging, rotation, cropping and download.
