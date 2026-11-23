@@ -72,7 +72,7 @@
     state.pages.forEach((record, index) => {
       const source = state.sources[record.source];
       const card = document.createElement("div");
-      card.className = "page-card card border-secondary-subtle p-2" + (record.selected ? " border-dark bg-body-tertiary" : "");
+      card.className = "page-card card border p-2" + (record.selected ? " border-dark bg-body-tertiary" : " border-secondary-subtle");
       const preview = document.createElement("div");
       preview.className = "page-preview";
       const canvas = document.createElement("canvas");
@@ -352,6 +352,7 @@
     if (!record) return;
     record.selected = input.checked;
     input.closest(".page-card").classList.toggle("border-dark", record.selected);
+    input.closest(".page-card").classList.toggle("border-secondary-subtle", !record.selected);
     input.closest(".page-card").classList.toggle("bg-body-tertiary", record.selected);
     updateControls();
   });
