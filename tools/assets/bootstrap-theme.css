@@ -1,0 +1,49 @@
+/* Bootstrap 5.3.9 theme tokens. Primary: charcoal (#343a40), on every route. */
+:root,[data-bs-theme="light"]{
+  --bs-primary:#343a40;
+  --bs-primary-rgb:52,58,64;
+  --bs-link-color:#343a40;
+  --bs-link-color-rgb:52,58,64;
+  --bs-link-hover-color:#212529;
+  --bs-link-hover-color-rgb:33,37,41;
+  --bs-focus-ring-color:rgba(52,58,64,.25);
+  --bs-body-bg:#f8f9fa;
+}
+.btn-primary{
+  --bs-btn-color:#fff;
+  --bs-btn-bg:#343a40;
+  --bs-btn-border-color:#343a40;
+  --bs-btn-hover-color:#fff;
+  --bs-btn-hover-bg:#212529;
+  --bs-btn-hover-border-color:#212529;
+  --bs-btn-focus-shadow-rgb:82,88,94;
+  --bs-btn-active-color:#fff;
+  --bs-btn-active-bg:#17191b;
+  --bs-btn-active-border-color:#17191b;
+  --bs-btn-disabled-color:#fff;
+  --bs-btn-disabled-bg:#343a40;
+  --bs-btn-disabled-border-color:#343a40;
+}
+.btn-outline-primary{
+  --bs-btn-color:#343a40;
+  --bs-btn-border-color:#343a40;
+  --bs-btn-hover-color:#fff;
+  --bs-btn-hover-bg:#343a40;
+  --bs-btn-hover-border-color:#343a40;
+  --bs-btn-focus-shadow-rgb:52,58,64;
+  --bs-btn-active-color:#fff;
+  --bs-btn-active-bg:#343a40;
+  --bs-btn-active-border-color:#343a40;
+  --bs-btn-disabled-color:#343a40;
+  --bs-btn-disabled-border-color:#343a40;
+}
+.form-control:focus,.form-select:focus,.form-check-input:focus{
+  border-color:#7d858d;
+  box-shadow:0 0 0 .25rem rgba(52,58,64,.18);
+}
+.form-check-input:checked{background-color:#343a40;border-color:#343a40}
+.nav-pills .nav-link.active,.nav-pills .show>.nav-link{background-color:#343a40}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{
+  outline:2px solid #495057;
+  outline-offset:2px;
+}

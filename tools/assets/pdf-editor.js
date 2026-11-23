@@ -18,7 +18,7 @@
     state.notice = { key, vars, type };
     const element = $("status");
     element.textContent = t(key, vars);
-    element.className = "status" + (type ? " " + type : "");
+    element.className = "alert mt-3 mb-0 " + (type === "error" ? "alert-danger" : type === "success" ? "alert-success" : "alert-secondary");
   }
 
   function selectedPages() { return state.pages.filter(page => page.selected); }
@@ -46,7 +46,7 @@
   function createButton(action, label, index, edge = false) {
     const button = document.createElement("button");
     button.type = "button";
-    button.className = "button small";
+    button.className = "btn btn-sm " + (action === "remove" ? "btn-outline-danger" : "btn-outline-secondary");
     button.dataset.action = action;
     button.dataset.index = String(index);
     if (edge) button.dataset.edge = "true";
@@ -62,7 +62,7 @@
     host.replaceChildren();
     if (!state.pages.length) {
       const empty = document.createElement("p");
-      empty.className = "muted";
+      empty.className = "text-secondary";
       empty.textContent = t("noPages");
       host.append(empty);
       updateControls();
@@ -72,7 +72,7 @@
     state.pages.forEach((record, index) => {
       const source = state.sources[record.source];
       const card = document.createElement("div");
-      card.className = "page-card" + (record.selected ? " selected" : "");
+      card.className = "page-card card border p-2" + (record.selected ? " border-dark bg-body-tertiary" : " border-secondary-subtle");
       const preview = document.createElement("div");
       preview.className = "page-preview";
       const canvas = document.createElement("canvas");
@@ -87,6 +87,7 @@
       choose.className = "page-check";
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
+      checkbox.className = "form-check-input";
       checkbox.checked = record.selected;
       checkbox.dataset.pageId = String(record.id);
       const label = document.createElement("span");
@@ -95,7 +96,7 @@
       card.append(choose);
       if (record.rotation || Object.values(record.crop).some(value => value > 0)) {
         const note = document.createElement("div");
-        note.className = "small-note";
+        note.className = "small text-secondary";
         const crop = Object.values(record.crop).some(value => value > 0) ? " · crop" : "";
         note.textContent = (record.rotation ? record.rotation + "°" : "") + crop;
         card.append(note);
@@ -350,7 +351,9 @@
     const record = state.pages.find(page => String(page.id) === input.dataset.pageId);
     if (!record) return;
     record.selected = input.checked;
-    input.closest(".page-card").classList.toggle("selected", record.selected);
+    input.closest(".page-card").classList.toggle("border-dark", record.selected);
+    input.closest(".page-card").classList.toggle("border-secondary-subtle", !record.selected);
+    input.closest(".page-card").classList.toggle("bg-body-tertiary", record.selected);
     updateControls();
   });
   $("pages").addEventListener("click", event => {

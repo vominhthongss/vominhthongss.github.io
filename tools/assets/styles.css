@@ -1,39 +1,12 @@
-:root{color-scheme:light;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#172533;background:#f4f7fb;font-size:16px}
-*{box-sizing:border-box}body{margin:0;line-height:1.6}a{color:#165cba}button,input,select{font:inherit}
-button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.55}
-button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #f5a623;outline-offset:3px}
-.site-header{border-bottom:1px solid #dbe2ed;background:#fff}.site-header-inner{max-width:1100px;margin:auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-.brand{font-size:1.08rem;font-weight:750;text-decoration:none;color:#122b46}
-.header-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.header-actions label{font-size:.88rem;color:#475569}.header-actions select{border:1px solid #bdc9d6;border-radius:10px;padding:6px 8px;background:#fff}
-.container{width:min(1100px,100%);margin:auto;padding:34px 20px 55px}.eyebrow{font-size:.82rem;text-transform:uppercase;letter-spacing:.11em;color:#2463a4;font-weight:750}
-h1{font-size:clamp(1.75rem,4vw,2.7rem);line-height:1.22;letter-spacing:-.03em;margin:9px 0 12px}h2{font-size:1.25rem;margin:0 0 10px}
-.lead{max-width:720px;color:#4b6073;font-size:1.08rem;margin:0 0 23px}.muted{color:#526579}.card{background:#fff;border:1px solid #dbe4ef;border-radius:18px;box-shadow:0 8px 25px rgba(35,64,96,.045);padding:24px}
-.tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:18px;margin-top:26px}
-.tool-card{display:flex;flex-direction:column;gap:8px}.tool-card p{margin:0;color:#4b6073}.tool-card .button{align-self:flex-start;margin-top:10px}
-.button{border:1px solid #c0cede;background:#fff;color:#153c6a;border-radius:10px;min-height:40px;min-width:40px;padding:8px 13px;font-weight:650;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:7px}
-.button:hover:not(:disabled){background:#eaf2fa}.button.primary{background:#165cba;border-color:#165cba;color:#fff}.button.primary:hover:not(:disabled){background:#114c9c}.button.danger{color:#a12639;border-color:#eabcc4}.button.danger:hover:not(:disabled){background:#fff0f2}
-.button.small{padding:5px 9px;min-height:34px;font-size:.9rem}.toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.section{margin-top:22px}
-.dropzone{position:relative;text-align:center;border:2px dashed #a3b8d4;border-radius:14px;padding:28px 20px;background:#f8fbff}
-.dropzone.dragging{background:#e5f1ff;border-color:#165cba}.dropzone h2{margin:0 0 4px}.dropzone p{margin:2px 0 16px}
-.visually-hidden{position:absolute;width:1px;height:1px;clip:rect(0,0,0,0);clip-path:inset(50%);overflow:hidden;white-space:nowrap}
-.status{margin:14px 0 0;padding:10px 13px;border-radius:10px;background:#eef5fd;color:#1d4e81;min-height:45px;overflow-wrap:anywhere}
-.status.error{background:#fff0f2;color:#9d2439}.status.success{background:#eaf8ee;color:#22673c}
-.editor-grid{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:20px;align-items:start}
-.panel{background:#fff;border:1px solid #dbe4ef;border-radius:16px;padding:17px}.panel h2{margin:0 0 10px}
-.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.controls .button{flex-shrink:0}
-.page-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:13px;margin-top:17px}
-.page-card{min-width:0;border:1px solid #d6e0ec;border-radius:13px;padding:10px;background:#fff}
-.page-card.selected{border-color:#3c76d3;background:#f4f8fe}
-.page-preview{height:188px;display:flex;align-items:center;justify-content:center;border-radius:8px;background:#e9eef5;overflow:hidden}
-.page-preview canvas{display:block;max-width:100%;max-height:100%;box-shadow:0 2px 7px #0002}
-.page-title{font-size:.85rem;font-weight:600;overflow-wrap:anywhere;margin:7px 0 2px}.page-check{display:flex;gap:6px;align-items:center;min-height:28px}.page-actions{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
-.page-actions button{font-size:.78rem;padding:5px 7px;min-height:32px}
-.panel label{display:block;font-size:.92rem;margin:10px 0 4px;font-weight:600}
-.crop-inputs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px 9px}
-.crop-inputs label{margin-top:2px}.crop-inputs input{width:100%;padding:8px;border:1px solid #bfccda;border-radius:9px}
-.checkline{display:flex!important;gap:8px;align-items:center;font-weight:500!important}.checkline input{width:17px;height:17px}
-.stack{display:grid;gap:10px}.divider{border:0;border-top:1px solid #e2e8f0;margin:18px 0}
-.small-note{font-size:.85rem;color:#546477}.footer{font-size:.85rem;color:#63738a;margin-top:28px;padding-top:12px;border-top:1px solid #dbe2ed}
-@media(max-width:800px){.editor-grid{grid-template-columns:minmax(0,1fr)}.container{padding-top:25px}.card{padding:18px}}
-@media(max-width:420px){.page-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.page-preview{height:145px}.page-actions .button{font-size:.73rem;padding:4px 6px}.toolbar .button{font-size:.87rem}}
+/* PDF-specific widgets only; all generic layout/buttons/forms use Bootstrap. */
+.dropzone{border:2px dashed var(--bs-secondary-border-subtle);border-radius:var(--bs-border-radius-lg);background:var(--bs-tertiary-bg);transition:border-color .15s,background .15s}
+.dropzone.dragging{border-color:var(--bs-primary);background:var(--bs-secondary-bg)}
+.page-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:1rem}
+.page-card{min-width:0}
+.page-preview{height:188px;display:flex;align-items:center;justify-content:center;border-radius:.375rem;background:var(--bs-secondary-bg);overflow:hidden}
+.page-preview canvas{display:block;max-width:100%;max-height:100%;box-shadow:0 2px 7px rgba(0,0,0,.12)}
+.page-title{font-size:.82rem;font-weight:600;overflow-wrap:anywhere;margin:.55rem 0 .25rem}
+.page-check{display:flex;gap:.375rem;align-items:center;min-height:28px}
+.page-actions{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.45rem}
+.page-actions .btn{font-size:.76rem;padding:.25rem .45rem}
+@media(max-width:420px){.page-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.page-preview{height:145px}}
