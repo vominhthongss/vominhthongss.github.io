@@ -46,7 +46,7 @@ The site uses the same visual system as the PDF editor across **all public GitHu
 - MomWell landing page, privacy policy, and account-deletion page.
 - Tools directory and PDF editor (already using the base styles).
 
-**Bootstrap 5.3.9** is the shared UI framework on all eight HTML routes. `tools/assets/bootstrap-theme.css` centrally defines the charcoal `primary` color (`#343a40`) and overrides Bootstrap's primary buttons, link colors, form focus and checked states. Each page includes the version-pinned Bootstrap CSS and JS bundle with Subresource Integrity (SRI). Bootstrap's `container`, `row`, `col-*`, `card`, `navbar`, `btn`, `form-*`, `alert`, spacing and typography utilities provide all general styling. `tools/assets/site-layout.css` contains only localized article visibility and Lofi Garden/MomWell screenshots and store-badge adjustments. `tools/assets/styles.css` contains only PDF-specific drag/drop and thumbnail layout. The product pages retain their translated text, screenshots, store badges, policies, and original behavior.
+**Bootstrap 5.3.9** is loaded directly from the official jsDelivr CDN on all eight HTML routes, using version-pinned CSS + the JavaScript bundle with official Subresource Integrity (SRI) hashes. The design deliberately uses native Bootstrap components and utilities instead of an overriding theme: `container`, `row`, `col-*`, `navbar`, `card`, `btn-dark`, `btn-outline-dark`, `form-*`, `alert`, and the default neutral `bg-body-tertiary` palette. There is **no custom Bootstrap theme stylesheet**. `tools/assets/site-layout.css` only handles initial locale visibility and sizes of game media; `tools/assets/styles.css` only handles PDF thumbnails/drag-and-drop and the dark checkbox accent. The product pages retain their translated text, screenshots, store badges, policies, and behavior. The first English article is active in the source HTML to prevent flashes of all translations before JavaScript initializes.
 
 `site-shell.js` connects the shared header language picker to the existing translation controls without rewriting policy/document scripts. Original language buttons remain present (but visually hidden); switching languages still uses the original page selector. Header links preserve the locale through `?lang=`.
 
@@ -56,7 +56,7 @@ The site uses the same visual system as the PDF editor across **all public GitHu
 2. Verify locale switches at `/`, `/lofi-garden/`, `/lofi-garden/policy.html`, `/mom-well/`, `/mom-well/policy.html`, and `/mom-well/delete-account.html`.
 3. Verify privacy-policy and account-deletion anchor links still navigate to the corresponding locale.
 4. Confirm app store badge images, screenshot carousels, and PDF editor interactions still work.
-5. Confirm `/tools/` and `/tools/merge-pdf/` render with Bootstrap components and the shared charcoal primary color. Ensure PDF drag/drop, selection, rotation, crop, and export still work.
+5. Confirm `/tools/` and `/tools/merge-pdf/` render with Bootstrap components and neutral dark action buttons. Ensure PDF drag/drop, selection, rotation, crop, and export still work.
 
 
 The Bootstrap CDN links and SRI hashes follow [Bootstrap's official 5.3.9 documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/). Use one version across all pages when upgrading.
