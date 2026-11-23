@@ -46,7 +46,7 @@ The site uses the same visual system as the PDF editor across **all public GitHu
 - MomWell landing page, privacy policy, and account-deletion page.
 - Tools directory and PDF editor (already using the base styles).
 
-`/tools/assets/styles.css` is the single base for typography, background, colors, controls, headers, and cards. `site-layout.css` extends that design for localized portfolio, landing, and policy content. The product pages retain their existing translated copy, app screenshots, store badges, policy text, and behavior.
+**Bootstrap 5.3.9** is the shared UI framework on all eight HTML routes. `tools/assets/bootstrap-theme.css` centrally defines the charcoal `primary` color (`#343a40`) and overrides Bootstrap's primary buttons, link colors, form focus and checked states. Each page includes the version-pinned Bootstrap CSS and JS bundle with Subresource Integrity (SRI). Bootstrap's `container`, `row`, `col-*`, `card`, `navbar`, `btn`, `form-*`, `alert`, spacing and typography utilities provide all general styling. `tools/assets/site-layout.css` contains only localized article visibility and Lofi Garden/MomWell screenshots and store-badge adjustments. `tools/assets/styles.css` contains only PDF-specific drag/drop and thumbnail layout. The product pages retain their translated text, screenshots, store badges, policies, and original behavior.
 
 `site-shell.js` connects the shared header language picker to the existing translation controls without rewriting policy/document scripts. Original language buttons remain present (but visually hidden); switching languages still uses the original page selector. Header links preserve the locale through `?lang=`.
 
@@ -56,5 +56,7 @@ The site uses the same visual system as the PDF editor across **all public GitHu
 2. Verify locale switches at `/`, `/lofi-garden/`, `/lofi-garden/policy.html`, `/mom-well/`, `/mom-well/policy.html`, and `/mom-well/delete-account.html`.
 3. Verify privacy-policy and account-deletion anchor links still navigate to the corresponding locale.
 4. Confirm app store badge images, screenshot carousels, and PDF editor interactions still work.
-5. Confirm `/tools/` and `/tools/merge-pdf/` retain their original appearance.
+5. Confirm `/tools/` and `/tools/merge-pdf/` render with Bootstrap components and the shared charcoal primary color. Ensure PDF drag/drop, selection, rotation, crop, and export still work.
 
+
+The Bootstrap CDN links and SRI hashes follow [Bootstrap's official 5.3.9 documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/). Use one version across all pages when upgrading.
