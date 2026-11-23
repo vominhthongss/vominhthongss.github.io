@@ -1,3 +1,5 @@
+.js main article{display:none}
+.js main article.active{display:block}
 /* Consistent presentation for the main site, app pages, and policy pages.
    Palette, typography, buttons, spacing and cards extend /tools/assets/styles.css. */
 .site-legacy-languages{display:none}
