@@ -18,7 +18,7 @@
     state.notice = { key, vars, type };
     const element = $("status");
     element.textContent = t(key, vars);
-    element.className = "alert mt-3 mb-0 " + (type === "error" ? "alert-danger" : type === "success" ? "alert-success" : "alert-secondary");
+    element.className = "alert mt-3 mb-0 rounded-0 " + (type === "error" ? "alert-danger" : type === "success" ? "alert-success" : "alert-secondary");
   }
 
   function selectedPages() { return state.pages.filter(page => page.selected); }
@@ -46,7 +46,7 @@
   function createButton(action, label, index, edge = false) {
     const button = document.createElement("button");
     button.type = "button";
-    button.className = "btn btn-sm " + (action === "remove" ? "btn-outline-danger" : "btn-outline-secondary");
+    button.className = "btn btn-sm rounded-0 " + (action === "remove" ? "btn-outline-danger" : "btn-outline-secondary");
     button.dataset.action = action;
     button.dataset.index = String(index);
     if (edge) button.dataset.edge = "true";
@@ -72,22 +72,24 @@
     state.pages.forEach((record, index) => {
       const source = state.sources[record.source];
       const card = document.createElement("div");
-      card.className = "page-card card border p-2" + (record.selected ? " border-dark bg-body-tertiary" : " border-secondary-subtle");
+      card.className = "card border p-2 h-100 rounded-0 d-flex flex-column" + (record.selected ? " border-dark bg-body-tertiary" : " border-secondary-subtle");
+      card.dataset.pdfPageCard = "true";
       const preview = document.createElement("div");
-      preview.className = "page-preview";
+      preview.className = "bg-body-secondary border d-flex align-items-center justify-content-center p-2";
       const canvas = document.createElement("canvas");
+      canvas.className = "img-fluid d-block mx-auto";
       canvas.dataset.pageId = String(record.id);
       preview.append(canvas);
       card.append(preview);
       const title = document.createElement("p");
-      title.className = "page-title";
+      title.className = "small fw-semibold text-break mt-2 mb-1";
       title.textContent = source.name + " · " + t("page") + " " + record.pageNumber;
       card.append(title);
       const choose = document.createElement("label");
-      choose.className = "page-check";
+      choose.className = "form-check d-flex gap-2 align-items-center mt-2";
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
-      checkbox.className = "form-check-input";
+      checkbox.className = "form-check-input mt-0 rounded-0";
       checkbox.checked = record.selected;
       checkbox.dataset.pageId = String(record.id);
       const label = document.createElement("span");
@@ -102,7 +104,7 @@
         card.append(note);
       }
       const actions = document.createElement("div");
-      actions.className = "page-actions";
+      actions.className = "d-flex flex-wrap gap-1 mt-auto pt-2";
       actions.append(
         createButton("up", "↑ " + t("up"), index, index === 0),
         createButton("down", "↓ " + t("down"), index, index === state.pages.length - 1),
@@ -113,7 +115,10 @@
       actions.children[2].setAttribute("aria-label", t("rotateLeft"));
       actions.children[3].setAttribute("aria-label", t("rotateRight"));
       card.append(actions);
-      fragment.append(card);
+      const column = document.createElement("div");
+      column.className = "col";
+      column.append(card);
+      fragment.append(column);
     });
     host.append(fragment);
     if ("IntersectionObserver" in window) {
@@ -144,8 +149,6 @@
       const ratio = Math.min(window.devicePixelRatio || 1, 2);
       canvas.width = Math.ceil(viewport.width * ratio);
       canvas.height = Math.ceil(viewport.height * ratio);
-      canvas.style.width = viewport.width + "px";
-      canvas.style.height = viewport.height + "px";
       const context = canvas.getContext("2d");
       if (!context) return;
       const transform = ratio === 1 ? undefined : [ratio, 0, 0, ratio, 0, 0];
@@ -208,7 +211,12 @@
     for (const record of state.pages) record.selected = selected;
     for (const box of $("pages").querySelectorAll("input[data-page-id]")) {
       box.checked = selected;
-      box.closest(".page-card").classList.toggle("selected", selected);
+      const card = box.closest("[data-pdf-page-card]");
+      if (card) {
+        card.classList.toggle("border-dark", selected);
+        card.classList.toggle("border-secondary-subtle", !selected);
+        card.classList.toggle("bg-body-tertiary", selected);
+      }
     }
     updateControls();
   }
@@ -333,11 +341,15 @@
   const zone = $("dropzone");
   for (const type of ["dragenter", "dragover"]) zone.addEventListener(type, event => {
     event.preventDefault();
-    if (!state.busy) zone.classList.add("dragging");
+    if (!state.busy) {
+      zone.classList.remove("border-secondary", "bg-body-tertiary");
+      zone.classList.add("border-dark", "bg-secondary-subtle");
+    }
   });
   for (const type of ["dragleave", "drop"]) zone.addEventListener(type, event => {
     event.preventDefault();
-    zone.classList.remove("dragging");
+    zone.classList.remove("border-dark", "bg-secondary-subtle");
+    zone.classList.add("border-secondary", "bg-body-tertiary");
   });
   zone.addEventListener("drop", event => void addFiles(Array.from(event.dataTransfer?.files || [])));
   window.addEventListener("dragover", event => event.preventDefault());
@@ -351,9 +363,12 @@
     const record = state.pages.find(page => String(page.id) === input.dataset.pageId);
     if (!record) return;
     record.selected = input.checked;
-    input.closest(".page-card").classList.toggle("border-dark", record.selected);
-    input.closest(".page-card").classList.toggle("border-secondary-subtle", !record.selected);
-    input.closest(".page-card").classList.toggle("bg-body-tertiary", record.selected);
+    const card = input.closest("[data-pdf-page-card]");
+    if (card) {
+      card.classList.toggle("border-dark", record.selected);
+      card.classList.toggle("border-secondary-subtle", !record.selected);
+      card.classList.toggle("bg-body-tertiary", record.selected);
+    }
     updateControls();
   });
   $("pages").addEventListener("click", event => {
