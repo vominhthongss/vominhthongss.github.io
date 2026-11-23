@@ -2,7 +2,7 @@
    This adapter makes the shared header work without rewriting product or policy logic. */
 (function () {
   "use strict";
-  const picker = document.querySelector(".site-language-select");
+  const picker = document.getElementById("site-language");
   if (!picker) return;
 
   const labels = {
@@ -17,7 +17,7 @@
     th: ["หน้าแรก", "เครื่องมือ", "ภาษา"],
     km: ["ទំព័រដើម", "ឧបករណ៍", "ភាសា"]
   };
-  const buttons = Array.from(document.querySelectorAll("nav.site-legacy-languages button[data-lang]"));
+  const buttons = Array.from(document.querySelectorAll("nav[data-legacy-langs] button[data-lang]"));
   const normalize = raw => {
     const value = (raw || "").replace("-", "_");
     if (buttons.some(button => button.dataset.lang === value)) return value;
