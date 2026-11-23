@@ -37,26 +37,25 @@ Run a static HTTP server in the repository root, such as `python3 -m http.server
 
 There is no build step; `index.html`, `tools/index.html` and `tools/merge-pdf/index.html` are served directly by GitHub Pages.
 
-## Shared website design system
+## Strict Bootstrap-only website design
 
-The site uses the same visual system as the PDF editor across **all public GitHub Pages HTML routes**:
+All eight public HTML pages load **Bootstrap 5.3.9 CSS and JS bundle from jsDelivr CDN**, with SRI values copied from [the official Bootstrap documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/). No local stylesheet files, `<style>` blocks, inline `style` attributes, custom CSS selectors, or custom theme overrides are used.
 
-- Root homepage `/`.
-- Lofi Garden landing page and privacy policy.
-- MomWell landing page, privacy policy, and account-deletion page.
-- Tools directory and PDF editor (already using the base styles).
+- Components and presentation use only Bootstrap-provided classes: `container`, `row`, `col`, `navbar`, `card`, `btn-dark`, `form-control`, `form-select`, `alert`, `d-none`, spacing and color utilities.
+- Use `rounded-0` on cards, buttons, alerts, forms and images to prevent rounded corners, including elements generated dynamically by JavaScript.
+- The homepage lists apps and games separately from browser tools.
+- Lofi Garden uses responsive Bootstrap columns for the app description and screenshots.
+- Language tabs are switched by JavaScript toggling Bootstrap's `d-none` class; the language selector is wired through IDs and `data-*` attributes, not CSS selectors unique to the project. Initial HTML hides all non-English language articles until a selected language is applied.
+- The PDF editor builds its dynamic page cards via Bootstrap grid/utility classes; drag/drop and selection states toggle Bootstrap-provided border/background classes. Canvas pixel dimensions are set through canvas attributes without custom CSS styling.
+- No change to translated text, privacy policies, local PDF processing or download behavior is intended.
 
-**Bootstrap 5.3.9** is loaded directly from the official jsDelivr CDN on all eight HTML routes, using version-pinned CSS + the JavaScript bundle with official Subresource Integrity (SRI) hashes. The design deliberately uses native Bootstrap components and utilities instead of an overriding theme: `container`, `row`, `col-*`, `navbar`, `card`, `btn-dark`, `btn-outline-dark`, `form-*`, `alert`, and the default neutral `bg-body-tertiary` palette. There is **no custom Bootstrap theme stylesheet**. `tools/assets/site-layout.css` only handles initial locale visibility and sizes of game media; `tools/assets/styles.css` only handles PDF thumbnails/drag-and-drop and the dark checkbox accent. The product pages retain their translated text, screenshots, store badges, policies, and behavior. The first English article is active in the source HTML to prevent flashes of all translations before JavaScript initializes.
+### Manual regression checklist
 
-`site-shell.js` connects the shared header language picker to the existing translation controls without rewriting policy/document scripts. Original language buttons remain present (but visually hidden); switching languages still uses the original page selector. Header links preserve the locale through `?lang=`.
+1. Check each page at 375px and 1280px: all buttons, cards, inputs and images have **square corners**.
+2. Verify all supported language selectors and URL `?lang=` and `#lang` links. The homepage and Lofi Garden support 10 locales; MomWell supports 6.
+3. Confirm the app screenshots, icon, store badges and privacy/account-deletion links.
+4. On `/tools/merge-pdf/`, test drag-and-drop, multiple files, page selection, rearranging, rotation, cropping and download.
+5. Inspect network requests for stylesheet files: the **only CSS request** should be the version-pinned Bootstrap CDN.
+6. Check both regular and high-DPI screens for PDF preview canvas sizing.
 
-### Visual regression checklist
-
-1. Check layout at 375px and 1280px widths: header, language selector, cards, screenshots, and policy text.
-2. Verify locale switches at `/`, `/lofi-garden/`, `/lofi-garden/policy.html`, `/mom-well/`, `/mom-well/policy.html`, and `/mom-well/delete-account.html`.
-3. Verify privacy-policy and account-deletion anchor links still navigate to the corresponding locale.
-4. Confirm app store badge images, screenshot carousels, and PDF editor interactions still work.
-5. Confirm `/tools/` and `/tools/merge-pdf/` render with Bootstrap components and neutral dark action buttons. Ensure PDF drag/drop, selection, rotation, crop, and export still work.
-
-
-The Bootstrap CDN links and SRI hashes follow [Bootstrap's official 5.3.9 documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/). Use one version across all pages when upgrading.
+There is no build step; GitHub Pages serves all HTML, JavaScript and images directly.
