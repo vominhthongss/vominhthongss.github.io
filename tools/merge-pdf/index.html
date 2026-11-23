@@ -76,8 +76,16 @@
     <footer class="footer"><span data-i18n="privacyWarning">PDF pages are processed on your device. An internet connection is needed once to load the PDF libraries.</span></footer>
   </main>
   <script defer src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
   <script defer src="../assets/i18n.js"></script>
-  <script defer src="../assets/pdf-editor.js"></script>
+  <script type="module">
+    try {
+      const pdfjs = await import("https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.min.mjs");
+      pdfjs.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.mjs";
+      window.pdfjsLib = pdfjs;
+    } catch (error) {
+      console.error("PDF.js could not be loaded:", error);
+    }
+    await import("../assets/pdf-editor.js");
+  </script>
 </body>
 </html>
