@@ -479,7 +479,7 @@
   let listeners=[];
   function t(key,values={}) {
     const raw=DICTIONARIES[current]?.[key]||DICTIONARIES.en[key]||key;
-    return raw.replace(/\\{(\\w+)\\}/g,(_,name)=>String(values[name]??""));
+    return raw.replace(/\{(\w+)\}/g,(_,name)=>String(values[name]??""));
   }
   function apply() {
     document.documentElement.lang=HTML_LANG[current]||current;
