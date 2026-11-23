@@ -3,7 +3,7 @@
   "use strict";
   const MAX_FILE_BYTES = 100 * 1024 * 1024;
   const MAX_PAGES = 300;
-  const WORKER = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+  const WORKER = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.mjs";
   const $ = id => document.getElementById(id);
   const t = (key, vars) => window.ToolsI18n.t(key, vars);
   const state = {
@@ -176,7 +176,7 @@
         }
         try {
           const bytes = new Uint8Array(await file.arrayBuffer());
-          const pdf = await window.pdfjsLib.getDocument({ data: bytes.slice() }).promise;
+          const pdf = await window.pdfjsLib.getDocument({ data: bytes.slice(), isEvalSupported: false }).promise;
           if (state.pages.length + pdf.numPages > MAX_PAGES) {
             await pdf.destroy();
             notice("limit", "error");
