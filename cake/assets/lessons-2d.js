@@ -95,7 +95,7 @@
     g.restore();
   }
   const titles={mix:"Trộn nguyên liệu",foam:"Tạo bọt và vân",fold:"Trộn nhẹ bằng phới",oven:"Nướng bánh",emulsion:"Tạo nhũ tương",decorate:"Trang trí",separate:"Chuẩn bị trứng",roll:"Cuộn bánh",pipe:"Bắt bột / kem",pour:"Thêm nguyên liệu",sieve:"Rây hỗn hợp",pan:"Làm chín trên chảo",press:"Tạo hình trong khuôn",rest:"Để nghỉ / nguội",melt:"Hòa tan cách thủy",chill:"Làm lạnh",cream:"Đánh bơ hoặc kem",shape:"Chia và tạo hình",divide:"Chia phần bột",knead:"Nhào bột",tart:"Ép vỏ tart",measure:"Định lượng",caramel:"Chuẩn bị caramel",steam:"Làm chín cách thủy",custard:"Khuấy hỗn hợp",fill:"Thêm nhân",gelatin:"Ngâm và hòa gelatin",layer:"Xếp từng lớp",proof:"Ủ bột",pizza:"Hoàn thiện đế và nhân",fruit:"Chuẩn bị trái cây",brush:"Quét mặt bánh",burger:"Xếp nhân bánh",foldcrepe:"Gấp vỏ bánh",review:"Kiểm tra dữ liệu"};
-  function stage(g,mode,kind,p){const t=reduce?.25:p,phase=t*Math.PI*2, bob=Math.sin(phase*3)*7;
+  function stage(g,mode,kind,p){const t=reduce ? .25 : p,phase=t*Math.PI*2, bob=Math.sin(phase*3)*7;
     g.save();g.translate(287,216);
     oval(g,0,105,188,15,"#ead8c3",null);line(g,-208,113,208,113,C.line,3);
     const mix=(col=C.gold,foamy=false)=>{bowl(g,0,18,91,col);whisk(g,Math.sin(phase*4)*34,5,Math.sin(phase*4)*.32);if(foamy)for(let i=0;i<11;i++){let a=i*2.4;oval(g,Math.cos(a)*60,11+Math.sin(a)*11-Math.abs(Math.sin(phase+i))*9,5+i%3,4,C.cream,C.line,1);}};
@@ -150,7 +150,7 @@
     if(active){active.destroy();active=null;}
     const m=model(article,i),panel=make("div","border border-secondary-subtle p-2 p-md-3 bg-body mt-3");
     const canvas=make("canvas","w-100 d-block border");canvas.width=W;canvas.height=H;canvas.setAttribute("role","img");canvas.setAttribute("aria-label","Hoạt họa 2D: "+m.title);panel.append(canvas);
-    const ctx=canvas.getContext("2d");if(!ctx){host.textContent="Trình duyệt không hỗ trợ Canvas.";return;}
+    const ctx=canvas.getContext("2d");if(!ctx){host.querySelector("[data-video-error]").textContent="Trình duyệt không hỗ trợ Canvas.";return;}
     const toolbar=make("div","d-flex flex-wrap align-items-center gap-2 mt-3");
     const btn=(label)=>{const b=make("button","btn btn-sm btn-outline-dark rounded-0",label);b.type="button";toolbar.append(b);return b;};
     const play=btn("Phát"),prev=btn("Cảnh trước"),next=btn("Cảnh sau"),speed=btn("1×"),restart=btn("Xem lại"),exportBtn=btn("Lưu video"),close=btn("Đóng");
@@ -158,7 +158,7 @@
     const clockText=make("span","small text-secondary font-monospace");toolbar.append(clockText);
     const transcript=make("p","small border-start border-3 ps-2 mt-2 mb-2");transcript.setAttribute("aria-live","polite");
     const status=make("p","small text-secondary mb-0","Hoạt họa 2D có phụ đề tiếng Việt, không có âm thanh. Có thể lưu video nếu trình duyệt hỗ trợ ghi Canvas.");status.setAttribute("role","status");
-    panel.append(toolbar,range,transcript,status);host.append(panel);button.textContent="Đóng video 2D";button.setAttribute("aria-expanded","true");
+    panel.append(toolbar,range,transcript,status);host.querySelector('[data-video-player]').append(panel);button.textContent="Đóng video 2D";button.setAttribute("aria-expanded","true");
     let time=0,running=false,rate=1,raf=0,last=0,current=null,rec=null,stream=null,exporting=false,destroyed=false;
     const controls=[play,prev,next,speed,restart,range,exportBtn];
     function draw(){const sc=render(ctx,m,time);range.value=time;clockText.textContent=fmt(time)+" / "+fmt(m.duration);if(sc!==current){current=sc;transcript.textContent=sc.title+": "+(sc.rows?sc.rows.map(r=>r.join(": ")).join("; ")+". ":"")+sc.body;}}
@@ -194,7 +194,7 @@
   chapters.forEach((article,i)=>{
     const host=article.querySelector("[data-cake-video]");if(!host||!boards[i])return;
     const button=host.querySelector("button");button.disabled=false;
-    button.onclick=()=>{if(active?.article===article){active.destroy();active=null;return;}try{open(article,i,host,button);}catch(e){host.querySelector("[data-video-error]").textContent="Không thể mở hoạt họa của chương này.";console.error(e);}};
+    button.onclick=()=>{if(active?.article===article){active.destroy();active=null;return;}try{host.querySelector("[data-video-error]").textContent="";open(article,i,host,button);}catch(e){host.querySelector("[data-video-error]").textContent="Không thể mở hoạt họa của chương này.";console.error(e);}};
   });
   // Stop playing a hidden chapter when a search/filter changes.
   const observer=new MutationObserver(()=>{if(active?.article.hidden){active.destroy();active=null;}});
