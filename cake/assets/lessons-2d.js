@@ -149,6 +149,7 @@
   function open(article,i,host,button){
     if(active){active.destroy();active=null;}
     const m=model(article,i),panel=make("div","border border-secondary-subtle p-2 p-md-3 bg-body mt-3");
+    const preview=host.querySelector("[data-video-preview]");
     const canvas=make("canvas","w-100 d-block border");canvas.width=W;canvas.height=H;canvas.setAttribute("role","img");canvas.setAttribute("aria-label","Hoạt họa 2D: "+m.title);panel.append(canvas);
     const ctx=canvas.getContext("2d");if(!ctx){host.querySelector("[data-video-error]").textContent="Trình duyệt không hỗ trợ Canvas.";return;}
     const toolbar=make("div","d-flex flex-wrap align-items-center gap-2 mt-3");
@@ -158,7 +159,7 @@
     const clockText=make("span","small text-secondary font-monospace");toolbar.append(clockText);
     const transcript=make("p","small border-start border-3 ps-2 mt-2 mb-2");transcript.setAttribute("aria-live","polite");
     const status=make("p","small text-secondary mb-0","Hoạt họa 2D có phụ đề tiếng Việt, không có âm thanh. Có thể lưu video nếu trình duyệt hỗ trợ ghi Canvas.");status.setAttribute("role","status");
-    panel.append(toolbar,range,transcript,status);host.querySelector('[data-video-player]').append(panel);button.textContent="Đóng video 2D";button.setAttribute("aria-expanded","true");
+    panel.append(toolbar,range,transcript,status);host.querySelector('[data-video-player]').append(panel);if(preview)preview.hidden=true;button.textContent="Đóng video 2D";button.setAttribute("aria-expanded","true");
     let time=0,running=false,rate=1,raf=0,last=0,current=null,rec=null,stream=null,exporting=false,destroyed=false;
     const controls=[play,prev,next,speed,restart,range,exportBtn];
     function draw(){const sc=render(ctx,m,time);range.value=time;clockText.textContent=fmt(time)+" / "+fmt(m.duration);if(sc!==current){current=sc;transcript.textContent=sc.title+": "+(sc.rows?sc.rows.map(r=>r.join(": ")).join("; ")+". ":"")+sc.body;}}
@@ -187,17 +188,30 @@
         exporting=true;controls.forEach(e=>e.disabled=true);status.textContent="Đang ghi video ở tốc độ 1×. Giữ thẻ này mở; bấm Đóng để hủy.";recorder.start(1000);start();
       }catch(e){cleanupRecording();status.textContent="Không thể xuất video: trình duyệt chưa hỗ trợ bộ mã hóa phù hợp.";}
     };
-    function destroy(){destroyed=true;stop();if(rec&&rec.state!=="inactive")rec.stop();else if(stream)stream.getTracks().forEach(t=>t.stop());panel.remove();button.textContent="Mở video 2D";button.setAttribute("aria-expanded","false");}
+    function destroy(){destroyed=true;stop();if(rec&&rec.state!=="inactive")rec.stop();else if(stream)stream.getTracks().forEach(t=>t.stop());panel.remove();if(preview)preview.hidden=false;button.textContent="▶ Phát video 2D";button.setAttribute("aria-expanded","false");}
     close.onclick=()=>{destroy();active=null;button.focus();};
-    active={article,destroy};draw();
+    active={article,destroy};draw();start();panel.scrollIntoView({block:"nearest",behavior:"auto"});
   }
+  const paintPoster=(article,i)=>{
+    const host=article.querySelector("[data-cake-video]"),poster=host?.querySelector("[data-video-poster]");
+    if(!poster||poster.dataset.ready)return;
+    try{const g=poster.getContext("2d");if(!g)throw new Error("Canvas unavailable");
+      const m=model(article,i);g.setTransform(poster.width/W,0,0,poster.height/H,0,0);render(g,m,0);
+      poster.setAttribute("aria-label","Xem trước: "+m.title);poster.dataset.ready="true";
+    }catch(e){poster.hidden=true;host.querySelector("[data-video-error]").textContent="Không thể vẽ hình xem trước trên trình duyệt này.";console.error(e);}
+  };
+  const posters=new Map();
+  const lazy=typeof IntersectionObserver!=="undefined"?new IntersectionObserver(entries=>{
+    for(const entry of entries){if(entry.isIntersecting){const i=posters.get(entry.target);paintPoster(entry.target,i);lazy.unobserve(entry.target);}}
+  },{rootMargin:"400px"}):null;
   chapters.forEach((article,i)=>{
     const host=article.querySelector("[data-cake-video]");if(!host||!boards[i])return;
     const button=host.querySelector("button");button.disabled=false;
+    if(i===0||!lazy)paintPoster(article,i);else{posters.set(article,i);lazy.observe(article);}
     button.onclick=()=>{if(active?.article===article){active.destroy();active=null;return;}try{host.querySelector("[data-video-error]").textContent="";open(article,i,host,button);}catch(e){host.querySelector("[data-video-error]").textContent="Không thể mở hoạt họa của chương này.";console.error(e);}};
   });
   // Stop playing a hidden chapter when a search/filter changes.
   const observer=new MutationObserver(()=>{if(active?.article.hidden){active.destroy();active=null;}});
   chapters.forEach(a=>observer.observe(a,{attributes:true,attributeFilter:["hidden"]}));
-  document.addEventListener("visibilitychange",()=>{if(document.hidden&&active){active.destroy();active=null;}});
+  // Preserve the open player when switching tabs; animation frames resume on return.
 })();
