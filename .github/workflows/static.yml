@@ -12,6 +12,7 @@ on:
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 
@@ -22,11 +23,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -38,6 +35,29 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for Pages artifact to be visible
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          for attempt in {1..12}; do
+            if [[ "$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts?name=github-pages" --jq 'any(.artifacts[]; .name == "github-pages" and .expired == false)')" == "true" ]]; then
+              echo "Pages artifact is available."
+              exit 0
+            fi
+            echo "Pages artifact not visible yet (attempt $attempt/12)."
+            if [[ "$attempt" -lt 12 ]]; then sleep 10; fi
+          done
+          echo "::error::Pages artifact did not become visible in the Actions API."
+          exit 1
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
