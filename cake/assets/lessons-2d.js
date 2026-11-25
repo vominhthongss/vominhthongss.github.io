@@ -95,6 +95,113 @@
     g.restore();
   }
   const titles={mix:"Trộn nguyên liệu",foam:"Tạo bọt và vân",fold:"Trộn nhẹ bằng phới",oven:"Nướng bánh",emulsion:"Tạo nhũ tương",decorate:"Trang trí",separate:"Chuẩn bị trứng",roll:"Cuộn bánh",pipe:"Bắt bột / kem",pour:"Thêm nguyên liệu",sieve:"Rây hỗn hợp",pan:"Làm chín trên chảo",press:"Tạo hình trong khuôn",rest:"Để nghỉ / nguội",melt:"Hòa tan cách thủy",chill:"Làm lạnh",cream:"Đánh bơ hoặc kem",shape:"Chia và tạo hình",divide:"Chia phần bột",knead:"Nhào bột",tart:"Ép vỏ tart",measure:"Định lượng",caramel:"Chuẩn bị caramel",steam:"Làm chín cách thủy",custard:"Khuấy hỗn hợp",fill:"Thêm nhân",gelatin:"Ngâm và hòa gelatin",layer:"Xếp từng lớp",proof:"Ủ bột",pizza:"Hoàn thiện đế và nhân",fruit:"Chuẩn bị trái cây",brush:"Quét mặt bánh",burger:"Xếp nhân bánh",foldcrepe:"Gấp vỏ bánh",review:"Kiểm tra dữ liệu"};
+
+  // Dedicated shot lists for chapters 01–05. The full source step remains
+  // visible as the subtitle; each shot adds a specific visual cue.
+  const detailedBoards = [
+    [
+      [["yolk","Khuấy lòng đỏ, bột và sữa"],["oil","Thêm dầu sau khi bột đồng nhất"]],
+      [["whites","Đánh lòng trắng, thêm đường từng đợt"],["peak","Chóp đứng, đầu hơi cong"]],
+      [["fold3","Fold lòng trắng theo ba đợt"],["tin","Rót bột tới 2/3 khuôn"]],
+      [["bake","Nướng cốt bánh"],["cool","Để nguội trên rack"]],
+      [["sauce","Nhũ hóa dầu từng giọt"],["lemon","Thêm chanh, giữ lạnh"]],
+      [["saltBake","Áo dầu và nướng trứng muối"],["saltTop","Phủ sốt, chà bông và trứng muối"]]
+    ],
+    [
+      [["matcha","Hòa matcha với sữa ấm"],["split","Tách sáu quả trứng"]],
+      [["greenMix","Khuấy lòng đỏ, bột, sữa matcha và dầu"],["greenSieve","Rây hỗn hợp matcha"]],
+      [["whites","Đánh lòng trắng, đường chia ba lần"],["peak","Kiểm tra chóp hơi cong"]],
+      [["fold3","Fold hai hỗn hợp"],["sheet","Lót giấy nến, dàn bột mỏng"]],
+      [["bake","Nướng cốt matcha"],["trim","Cắt mép khô theo đường chéo"],["preRoll","Cuộn nhẹ cùng giấy nến, để nguội"]],
+      [["creamCold","Đánh kem topping lạnh đến khi giữ vân"],["spread","Phết kem lên cốt nguội"],["finalRoll","Cuộn hoàn chỉnh"]]
+    ],
+    [
+      [["honey","Khuấy trứng, đường, muối và mật ong"]],
+      [["dryMilk","Trộn bột mì, bột nở và sữa"],["butterMix","Kết hợp hai âu rồi thêm bơ"]],
+      [["strain","Rây khi vón"],["wait","Để bột nghỉ 5–10 phút"]],
+      [["panPour","Láng bơ, đổ bột pancake"],["flip","Lật pancake, làm chín hai mặt"]],
+      [["hotBase","Quét khuôn, đổ lớp bột đầu"],["hotFill","Thêm chà bông và phủ bột"],["hotClose","Đóng khuôn, nướng nhiệt thấp"]]
+    ],
+    [
+      [["eggMix","Khuấy trứng, đường và muối"],["dryMilk","Trộn bột mì, bột nở và sữa"]],
+      [["butterMix","Kết hợp hai âu và bơ tan"],["strain","Rây bột cho mịn"]],
+      [["waitCrepe","Để bột nghỉ; đối chiếu hai mốc thời gian"]],
+      [["crepePour","Láng bơ, đổ và nghiêng chảo cho bột mỏng"],["lid","Đậy nắp, nấu nhiệt thấp tới khi viền nhấc"],["crepeServe","Để nguội rồi trang trí mứt"]]
+    ],
+    [
+      [["dryCocoa","Trộn các loại bột khô"],["wholeEgg","Đánh trứng nguyên quả với bột, đường, sữa, vani"]],
+      [["sp","Thêm SP, đánh đến bông mịn"],["ribbon","Giảm tốc, thêm dầu; kiểm tra dải bột"]],
+      [["cocoa","Thêm cacao"],["tin","Chống dính khuôn đế liền, rót bột"],["bake","Nướng cốt chocolate"]],
+      [["bath","Đun chocolate cách thủy"],["glaze","Thêm dầu từng phần, phủ chocolate"]],
+      [["custardSafe","Khuấy lòng đỏ và đường cách thủy đến chín an toàn"],["creamCold","Đánh bông whipping, sữa béo và topping"],["freeze","Phối hợp và làm đông"]]
+    ]
+  ];
+  function detailedStage(g,shot,kind,p){
+    const t=reduce ? .25 : p, e=ease(t), a=t*Math.PI*2, green=kind==="roll", cocoa=kind==="chocolate";
+    const batter=green?"#a7bb76":cocoa?"#a87551":"#edc17d", white="#fffdf4";
+    g.save();g.translate(287,216);
+    oval(g,0,105,188,15,"#ead8c3",null);line(g,-208,113,208,113,C.line,3);
+    const label=(s,x=0,y=98)=>text(g,s,x,y,14,C.muted,700,"center");
+    const stream=(x,y,x2,y2,col)=>{for(let j=0;j<9;j++){const q=(t*2+j/9)%1;oval(g,lerp(x,x2,q),lerp(y,y2,q),3+q*2,5,col,null);}};
+    const vessel=(x,y,col,rot=.65)=>{g.save();g.translate(x,y);g.rotate(rot);cup(g,0,0,col);g.restore();};
+    const mixing=(col,foamy=false)=>{bowl(g,20,20,100,col);whisk(g,20+Math.sin(a*4)*32,5,Math.sin(a*4)*.32);if(foamy)for(let i=0;i<12;i++){const z=i*2.4;oval(g,20+Math.cos(z)*68,17+Math.sin(z)*12,4+i%3,4,white,C.line,1);}};
+    const rack=()=>{for(let i=-4;i<=4;i++)line(g,i*30-12,75,i*30+12,94,C.muted,2);line(g,-145,75,145,75,C.ink,3);line(g,-145,94,145,94,C.ink,3);};
+    const pan=(rx=124)=>{oval(g,-15,49,rx,43,C.ink);rounded(g,rx-24,43,66,15,6,C.sage);oval(g,-15,43,rx-10,33,"#887365",null);};
+    const sheet=(col=batter)=>{tray(g,0,42,300,110);rounded(g,-130,-3,260,87,5,white,C.line,2);rounded(g,-116,5,232,69,5,col,null);};
+    const cakeTin=()=>{rounded(g,-100,7,200,82,12,C.blue);oval(g,0,7,100,20,C.cream);oval(g,0,7,90,15,batter,null);};
+    switch(shot){
+      case "yolk":case "eggMix":case "wholeEgg":case "greenMix":case "honey":case "dryMilk":case "butterMix":case "oil":case "cocoa":case "sp":case "dryCocoa":
+        mixing(shot==="dryCocoa"?"#dbc5aa":shot==="cocoa"?"#8a5541":shot==="sp"?white:shot==="dryMilk"?white:batter,shot==="sp");
+        if(["honey","oil","butterMix","greenMix","dryMilk","cocoa","sp","wholeEgg"].includes(shot)){
+          const col=shot==="cocoa"?C.choc:shot==="greenMix"?"#829d56":shot==="dryMilk"||shot==="wholeEgg"||shot==="sp"?white:C.gold;
+          vessel(-133,-55,col);stream(-100,-45,-55,15,col);
+        }else if(shot==="yolk"||shot==="eggMix"){egg(g,-139,-30,26);vessel(139,-48,white,-.55);}
+        break;
+      case "matcha":bowl(g,20,26,90,"#a2bb65");vessel(-126,-52,white);stream(-98,-40,-47,17,white);whisk(g,30+Math.sin(a*4)*24,8,Math.sin(a*4)*.25);break;
+      case "split":egg(g,-146,-36,32);arrow(g,-105,-28,-70,0);bowl(g,-48,24,65,C.gold);bowl(g,110,24,65,white);label("Lòng đỏ",-48);label("Lòng trắng",110);break;
+      case "whites":case "creamCold":
+        mixing(white,true);if(shot==="whites"){vessel(-132,-53,white);stream(-101,-43,-53,15,white);for(let i=0;i<3;i++)oval(g,-130+i*26,78,8,8,i<=Math.floor(t*3)?C.gold:C.cream);}else{spark(g,-125,-44,9);spark(g,141,-37,10);label("Kem còn lạnh");}break;
+      case "peak":bowl(g,0,32,100,white);g.beginPath();g.moveTo(-40,30);g.quadraticCurveTo(-12,14,0,-39);g.quadraticCurveTo(10,-54,27,-36);g.quadraticCurveTo(10,-41,16,-15);g.quadraticCurveTo(24,10,43,30);g.closePath();g.fillStyle=white;g.fill();g.strokeStyle=C.line;g.lineWidth=3;g.stroke();whisk(g,65,-35-e*18,.38);label("Chóp đứng, đầu hơi cong");break;
+      case "fold3":bowl(g,40,24,99,batter);g.save();g.translate(-109,-35);g.rotate(.48+Math.sin(a)*.12);bowl(g,0,0,48,white);g.restore();stream(-63,-19,-17,22,white);g.save();g.translate(44+Math.sin(a*2)*28,10);g.rotate(-.55+Math.sin(a*2)*.3);rounded(g,-7,-95,14,85,6,C.sage);rounded(g,-20,-17,40,34,7,white);g.restore();for(let i=0;i<3;i++)oval(g,-128+i*22,80,7,7,i<=Math.floor(t*3)?C.gold:white);break;
+      case "tin":cakeTin();vessel(-105,-67,batter);stream(-69,-53,-18,2,batter);if(kind==="salted"){line(g,110,29,110,75,C.ink,2);line(g,105,43,115,43,C.ink,3);text(g,"2/3",124,43,16);}break;
+      case "sheet":sheet();g.save();g.translate(-80+e*150,21);rounded(g,-8,-60,16,68,5,C.sage);rounded(g,-28,0,56,16,4,C.cream);g.restore();break;
+      case "bake":case "saltBake":{
+        rounded(g,-157,-111,314,213,16,C.sage);rounded(g,-138,-59,276,145,11,C.ink);rounded(g,-126,-47,252,121,7,"#f2cba8",null);for(let i=0;i<3;i++)oval(g,-102+i*35,-86,9,9,C.cream);rounded(g,32,-98,106,24,5,C.cream);
+        const temp=shot==="saltBake"?"170–180°C":kind==="salted"?"140/150°C":kind==="roll"?"140/160°C":"160/170°C";text(g,temp,85,-85,13,C.ink,700,"center");
+        if(shot==="saltBake"){tray(g,0,31,206,61);for(let i=0;i<4;i++)oval(g,-70+i*47,27,16,13,C.orange);}
+        else if(kind==="roll"){rounded(g,-101,16,202,46,6,C.blue);rounded(g,-91,18,182,31,4,batter);}
+        else{rounded(g,-79,2,158,61,8,C.blue);rounded(g,-72,17-e*28,144,37+e*28,9,batter);}
+        steam(g,0,8,t);break;}
+      case "cool":rack();rounded(g,-81,10,162,64,10,batter);oval(g,0,10,81,16,C.gold);steam(g,0,-3,1-t*.85);break;
+      case "sauce":case "lemon":mixing("#f4d788");if(shot==="sauce"){vessel(-130,-53,C.gold);stream(-99,-42,-55,13,C.gold);label("Dầu từng giọt");}else{path(g,[[-160,-48],[-105,-55],[-130,-9]],C.gold);stream(-130,-9,-51,19,white);spark(g,143,-28);label("Giữ lạnh, dùng sớm");}break;
+      case "saltTop":rack();rounded(g,-92,-5,184,76,12,batter);oval(g,0,-5,92,20,"#f7e5b4");for(let i=0;i<20;i++){if(i/20<e)line(g,-68+i*7,-6+(i%3)*6,-61+i*7,-14+(i%4)*5,C.brown,3);}for(let i=0;i<4;i++)if(t>.25+i*.12)oval(g,-60+i*40,-15+Math.max(0,.6-t)*-55,17,12,C.orange);break;
+      case "greenSieve":case "strain":bowl(g,15,43,90,batter);sieve(g,0,-54,t);break;
+      case "trim":sheet();line(g,-105,-5,-87,71,C.brown,3);line(g,105,-5,87,71,C.brown,3);g.save();g.translate(-105,-5+e*70);g.rotate(.2);rounded(g,-5,-53,10,65,3,C.sage);path(g,[[-5,12],[5,12],[5,48],[-4,36]],C.blue);g.restore();break;
+      case "preRoll":case "spread":case "finalRoll":
+        sheet("#a7bb76");if(shot==="spread"||shot==="finalRoll")rounded(g,-109,12,Math.max(8,218*(shot==="spread"?e:1)),56,6,white,null);
+        if(shot==="spread"){rounded(g,-100+e*200,-20,15,80,5,C.sage);rounded(g,-115+e*200,8,45,16,4,C.cream);}
+        else{const x=-108+e*182;rounded(g,x-23,0,46,80,20,"#8da35f");oval(g,x,68,22,12,batter);oval(g,x,68,13,7,shot==="finalRoll"?white:C.cream);arrow(g,-65,-31,95,-31);}
+        break;
+      case "wait":case "waitCrepe":bowl(g,-45,32,85,batter);clock(g,112,-20,t);label(shot==="wait"?"5–10 phút":"5–10 phút / bảng: 30 phút");break;
+      case "panPour":case "crepePour":case "flip":case "lid":case "crepeServe":{
+        pan();if(shot==="crepeServe"){oval(g,-12,40,101,30,C.gold);path(g,[[-106,40],[-12,10],[83,40],[-12,67]],"#eac58f");for(let i=0;i<4;i++)oval(g,-40+i*18,42,7,5,C.rose,null);label("Mứt trái cây");break;}
+        const thin=shot==="crepePour"||shot==="lid";let width=thin?lerp(28,105,e):65;const y=shot==="flip"?43-90*Math.sin(Math.PI*t):43;const depth=shot==="flip"?Math.max(3,23*Math.abs(Math.cos(Math.PI*t))):thin?27:22;
+        oval(g,-15,y,width,depth,shot==="flip"&&t>.5?C.brown:C.gold);
+        if(shot==="panPour"||shot==="crepePour"){vessel(-122,-53,batter);stream(-88,-38,-30,30,batter);}if(shot==="flip"){for(let i=0;i<7;i++)oval(g,-53+(i*17)%75,y-3+(i%3)*6,3,2,C.brown,null);}
+        if(shot==="lid"){oval(g,-15,30,118,34,"rgba(164,197,210,.62)",C.ink);rounded(g,-36,-12,42,13,5,C.sage);steam(g,-15,15,t);if(t>.65)line(g,66,35,90,27,C.gold,5);}
+        label("Nhiệt thấp");break;}
+      case "hotBase":case "hotFill":case "hotClose":{
+        rounded(g,-142,-4,284,83,18,C.ink);for(let i=0;i<2;i++){let x=-71+i*142;rounded(g,x-54,9,108,53,23,"#ab9982");rounded(g,x-48,15,96,41,19,batter);if(shot==="hotFill"||shot==="hotClose"){for(let j=0;j<10;j++)line(g,x-35+j*7,32+(j%3)*4,x-28+j*7,26+(j%4)*5,C.brown,2);if(t>.5)rounded(g,x-45,16,90,39,18,batter,null);}}
+        if(shot==="hotBase"){vessel(-118,-58,batter);stream(-88,-42,-71,18,batter);}if(shot==="hotClose"){rounded(g,-141,-86+e*73,282,66,14,C.sage);rounded(g,-42,-75+e*73,84,14,5,C.ink);steam(g,0,2,t);}label("Khuôn hotdog · nhiệt thấp");break;}
+      case "ribbon":bowl(g,0,40,100,batter);whisk(g,0,-30,.12);g.beginPath();g.moveTo(0,-29);g.bezierCurveTo(12,0,-24,4,4,35);g.strokeStyle=batter;g.lineWidth=12;g.stroke();oval(g,4,38,34,8,batter,C.brown,1);label("Dải bột mịn");break;
+      case "bath":case "custardSafe":pot(g,0,47,C.blue);bowl(g,0,5,78,shot==="bath"?C.choc:C.gold);whisk(g,Math.sin(a*4)*24,-7,Math.sin(a*4)*.2);steam(g,-74,42,t);steam(g,75,42,t);label("Cách thủy");break;
+      case "glaze":rack();rounded(g,-80,12,160,61,10,C.choc);oval(g,0,12,80,15,"#664234");vessel(-110,-70,C.choc);stream(-76,-53,-18,7,C.choc);for(let i=0;i<5;i++)rounded(g,-65+i*30,12,11,lerp(4,34,e),5,"#503329",null);label("Chocolate và dầu");break;
+      case "freeze":rounded(g,-94,-105,188,198,16,C.blue);line(g,-94,-38,94,-38);rounded(g,61,-91,12,40,5,C.cream);rounded(g,61,-21,12,60,5,C.cream);rounded(g,-67,-15,102,77,5,C.cream,C.line,2);bowl(g,-17,14,41,white);for(let i=0;i<3;i++)spark(g,-134+i*12,-62+i*35,8);break;
+      default:mixing(batter);
+    }
+    g.restore();
+  }
+
   function stage(g,mode,kind,p){const t=reduce ? .25 : p,phase=t*Math.PI*2, bob=Math.sin(phase*3)*7;
     g.save();g.translate(287,216);
     oval(g,0,105,188,15,"#ead8c3",null);line(g,-208,113,208,113,C.line,3);
@@ -127,7 +234,12 @@
     const [kind,...modes]=boards[i];if(modes.length!==steps.length)throw new Error("Storyboard does not match "+article.id);
     const scenes=[{mode:"intro",title:"Bài thực hành",body:intro,d:5}];
     for(const table of article.querySelectorAll("table")){const heading=table.closest(".table-responsive")?.previousElementSibling?.textContent.trim()||"Nguyên liệu";const rows=[...table.querySelectorAll("tbody tr")].map(r=>[r.cells[0].textContent.trim(),r.cells[1].textContent.trim()]);for(let j=0;j<rows.length;j+=4){const page=rows.slice(j,j+4);scenes.push({mode:"ingredients",title:heading,rows:page,body:"Cân theo bảng. Không tự đổi tỷ lệ khi có ghi chú chưa xác nhận.",d:Math.max(7,page.reduce((n,r)=>n+r.join(" ").split(/\s+/).length,0)*.37)});}}
-    steps.forEach((body,j)=>scenes.push({mode:modes[j],title:"Bước "+(j+1)+" · "+titles[modes[j]],body,d:Math.max(6,body.split(/\s+/).length*.37+2)}));
+    const shots=detailedBoards[i];
+    if(shots&&shots.length!==steps.length)throw new Error("Detailed storyboard does not match "+article.id);
+    steps.forEach((body,j)=>{
+      if(!shots){scenes.push({mode:modes[j],title:"Bước "+(j+1)+" · "+titles[modes[j]],body,d:Math.max(6,body.split(/\s+/).length*.37+2)});return;}
+      shots[j].forEach(([shot,title],k)=>scenes.push({mode:modes[j],shot,title:"Bước "+(j+1)+(shots[j].length>1?"."+ (k+1):"")+" · "+title,body,d:Math.max(6,body.split(/\s+/).length*.37+2)}));
+    });
     scenes.push({mode:/chưa|không áp dụng/i.test(temperature)?"review":"finish",title:"Nhiệt độ và thời gian",body:temperature,d:Math.max(7,temperature.split(/\s+/).length*.37+2)});
     scenes.push({mode:/chưa|mâu thuẫn|không tự/i.test(notes)?"review":"finish",title:"Ghi chú cuối bài",body:notes,d:Math.max(8,notes.split(/\s+/).length*.37+2)});
     let time=0;for(const s of scenes){s.start=time;time+=s.d;}return{title,kind,scenes,duration:time,index:i+1};
@@ -135,12 +247,12 @@
   function render(g,m,time){const sc=m.scenes.find(s=>time<s.start+s.d)||m.scenes.at(-1),p=clamp((time-sc.start)/sc.d,0,1);g.clearRect(0,0,W,H);g.fillStyle=C.paper;g.fillRect(0,0,W,H);g.lineCap="round";g.lineJoin="round";
     text(g,"BẾP NHỎ  /  GIÁO TRÌNH LÀM BÁNH",32,26,15,C.muted,700);text(g,String(m.index).padStart(2,"0")+" / 31",928,26,15,C.muted,700,"right");
     fit(g,m.title,32,43,896,42,30,22,750);line(g,32,91,928,91,C.line,2);
-    rounded(g,32,105,510,274,14,C.cream,C.line,2);stage(g,sc.mode,m.kind,p);
+    rounded(g,32,105,510,274,14,C.cream,C.line,2);if(sc.shot)detailedStage(g,sc.shot,m.kind,p);else stage(g,sc.mode,m.kind,p);
     rounded(g,558,105,370,274,14,"#f4e6d4",C.line,2);
     fit(g,sc.title,579,121,328,66,24,17,750);
     line(g,579,190,907,190,C.line,2);
     if(sc.rows){sc.rows.forEach((r,i)=>{const y=198+i*42;fit(g,r[0],579,y,185,40,16,11,550);fit(g,r[1],770,y,137,40,16,10,700);if(i<sc.rows.length-1)line(g,579,y+42,907,y+42,C.line,1);});}
-    else{const nr=m.scenes.indexOf(sc)+1;text(g,"PHÂN CẢNH "+nr+" / "+m.scenes.length,579,216,14,C.muted,700);if(sc.mode==="review")fit(g,"Thông tin cần đối chiếu — xem ghi chú của chương.",579,240,320,100,23,17,700);else{fit(g,sc.mode==="intro"?"Theo dõi từng công đoạn và bảng định lượng.":sc.mode==="finish"?"Xem thông số và lưu ý ngay bên dưới.":"Hình minh họa thao tác · đọc phụ đề để thực hành đúng.",579,239,320,106,22,17,500);}}
+    else{const nr=m.scenes.indexOf(sc)+1;text(g,"PHÂN CẢNH "+nr+" / "+m.scenes.length,579,216,14,C.muted,700);if(sc.shot)fit(g,"Theo dõi thao tác chuyển động và đọc phụ đề đầy đủ bên dưới.",579,239,320,106,22,17,500);else if(sc.mode==="review")fit(g,"Thông tin cần đối chiếu — xem ghi chú của chương.",579,240,320,100,23,17,700);else{fit(g,sc.mode==="intro"?"Theo dõi từng công đoạn và bảng định lượng.":sc.mode==="finish"?"Xem thông số và lưu ý ngay bên dưới.":"Hình minh họa thao tác · đọc phụ đề để thực hành đúng.",579,239,320,106,22,17,500);}}
     rounded(g,32,394,896,113,12,C.ink,null);fit(g,sc.body,54,405,852,91,23,14,500,C.cream);
     rounded(g,32,520,896,5,2,C.line,null);rounded(g,32,520,Math.max(2,896*time/m.duration),5,2,C.brown,null);
     return sc;
